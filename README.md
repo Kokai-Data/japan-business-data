@@ -55,7 +55,7 @@ kokai-for-public-business-intelligence-jp/
 ### Path 1: Claude Code (CLI)
 
 ```bash
-claude plugin marketplace add kokai-data/kokai-for-public-business-intelligence-jp
+claude plugin marketplace add Nihonbashi-AI-Lab/kokai-for-public-business-intelligence-jp
 claude plugin install japan-public-business-intelligence@kokai-for-public-business-intelligence-jp
 claude plugin install meeting-prep-jp@kokai-for-public-business-intelligence-jp
 ```
