@@ -1,0 +1,29 @@
+name: brief-composer
+description: |
+  Composes the final 1-page DD brief from evidence collected by
+  evidence-collector subagent. Applies the kokai_due_diligence_jp prompt
+  framework, 4-layer authority strip, and 士業 boundary disclaimer.
+type: leaf-worker
+
+input_schema:
+  type: object
+  required: ["evidence_bundle"]
+  properties:
+    evidence_bundle:
+      type: object
+      description: "Output from evidence-collector subagent"
+
+output_schema:
+  type: object
+  required: ["brief_markdown"]
+  properties:
+    brief_markdown:
+      type: string
+      description: "Final 1-page DD brief in Markdown with cited sources, authority strip, and 士業 boundary disclaimer"
+
+permissions:
+  prompts:
+    - kokai.kokai_due_diligence_jp
+    - kokai.kokai_competitor_corporate_brief_jp
+
+audit_log: true

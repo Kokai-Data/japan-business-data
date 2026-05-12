@@ -1,0 +1,8 @@
+{
+  "name": "competitor-brief-jp",
+  "version": "0.1.0",
+  "description": "3-tier competitor brief (overview / scale / certifications) for a Japanese company from gBizINFO public canonical sources.",
+  "author": {
+    "name": "Kokai Data"
+  }
+}

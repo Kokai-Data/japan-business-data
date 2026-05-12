@@ -1,0 +1,38 @@
+{
+  "name": "kokai-for-public-business-intelligence-jp",
+  "owner": {
+    "name": "Kokai Data"
+  },
+  "plugins": [
+    {
+      "name": "japan-public-business-intelligence",
+      "source": "./plugins/vertical-plugins/japan-public-business-intelligence",
+      "description": "Japanese public business intelligence: corporate registries (gBizINFO), government subsidies (J-Grants), and AI-citable evidence via the Kokai Data MCP server."
+    },
+    {
+      "name": "meeting-prep-jp",
+      "source": "./plugins/agent-plugins/meeting-prep-jp",
+      "description": "Prepare a 1-page cited pre-meeting brief for a Japanese company."
+    },
+    {
+      "name": "subsidy-fit-jp",
+      "source": "./plugins/agent-plugins/subsidy-fit-jp",
+      "description": "3-axis fit signal (regional / industry / scale) for a Japanese company x subsidy pair."
+    },
+    {
+      "name": "due-diligence-jp",
+      "source": "./plugins/agent-plugins/due-diligence-jp",
+      "description": "1-page due diligence brief on a Japanese company from public canonical sources."
+    },
+    {
+      "name": "competitor-brief-jp",
+      "source": "./plugins/agent-plugins/competitor-brief-jp",
+      "description": "3-tier competitor brief (overview / scale / certifications) for a Japanese company."
+    },
+    {
+      "name": "subsidy-landscape-jp",
+      "source": "./plugins/agent-plugins/subsidy-landscape-jp",
+      "description": "Top-N Japanese subsidies for an industry or use-purpose theme."
+    }
+  ]
+}

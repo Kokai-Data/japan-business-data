@@ -1,0 +1,8 @@
+{
+  "name": "subsidy-fit-jp",
+  "version": "0.1.0",
+  "description": "3-axis fit signal (regional / industry / scale) for a Japanese company x subsidy pair, using public canonical data.",
+  "author": {
+    "name": "Kokai Data"
+  }
+}

@@ -1,0 +1,39 @@
+name: kokai-due-diligence-jp
+type: managed-agent
+description: |
+  Japanese company due diligence agent — orchestrates company resolution,
+  evidence collection, and brief composition using the kokai MCP server.
+  Suitable for batch / overnight DD jobs on multiple Japanese companies.
+version: 0.1.0
+license: Apache-2.0
+
+system_prompt: |
+  You are a due diligence research agent for Japanese companies. You use
+  ONLY public canonical sources via the kokai MCP server. Output signal /
+  確認材料 / context, NOT decisions. Final 適格性 / 法的判断 requires a
+  certified Japanese 士業 (行政書士 / 中小企業診断士 / 公認会計士 / 弁護士).
+
+mcp_servers:
+  kokai:
+    url: https://mcp.kokai.ai/functions/v1/mcp-server
+
+subagents:
+  - name: company-resolver
+    file: subagents/company-resolver.yaml
+  - name: evidence-collector
+    file: subagents/evidence-collector.yaml
+  - name: brief-composer
+    file: subagents/brief-composer.yaml
+
+permissions:
+  tools:
+    - kokai.search_company
+    - kokai.get_entity_profile
+    - kokai.search_subsidies
+    - kokai.get_subsidy_detail
+    - kokai.get_evidence_refs
+  prompts:
+    - kokai.kokai_due_diligence_jp
+    - kokai.kokai_competitor_corporate_brief_jp
+
+audit_log: true

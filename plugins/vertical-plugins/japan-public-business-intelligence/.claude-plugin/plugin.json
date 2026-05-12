@@ -1,0 +1,8 @@
+{
+  "name": "japan-public-business-intelligence",
+  "version": "0.1.0",
+  "description": "Japanese public business intelligence: corporate registries (gBizINFO), government subsidies (J-Grants), and AI-citable evidence via the Kokai Data MCP server.",
+  "author": {
+    "name": "Kokai Data"
+  }
+}

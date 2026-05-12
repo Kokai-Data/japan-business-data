@@ -1,0 +1,49 @@
+{
+  "examples": [
+    {
+      "type": "handoff_request",
+      "description": "Initial DD request for a Japanese company by 13-digit corporate number",
+      "payload": {
+        "corporate_number": "1234567890123",
+        "due_diligence_scope": [
+          "company_profile",
+          "subsidy_signals",
+          "competitor_overview"
+        ],
+        "output_locale": "ja"
+      }
+    },
+    {
+      "type": "handoff_request",
+      "description": "Initial DD request by company name (orchestrator will resolve via company-resolver subagent)",
+      "payload": {
+        "company_name": "株式会社サンプル製造",
+        "due_diligence_scope": [
+          "company_profile",
+          "subsidy_signals"
+        ],
+        "output_locale": "ja"
+      }
+    },
+    {
+      "type": "response",
+      "description": "Final DD brief response from brief-composer subagent",
+      "payload": {
+        "brief_markdown": "## 面談準備 / DD ブリーフ\n\n**対象企業**: 株式会社サンプル製造 (法人番号 1234567890123)\n\n### 事業概要\n- ...\n\n### 財務概況\n- ...\n\n### 出典 4 階層\n- 公式: <count> records (cite_required)\n- Kokai 正規化: <count> records (cite_required)\n- AI 要約: <count>\n- AI 推定: <count>\n\n---\n士業 boundary disclaimer: ...",
+        "evidence_refs_snapshot": [
+          {
+            "source_url": "https://info.gbiz.go.jp/...",
+            "retrieved_at": "2026-MM-DDTHH:MM:SSZ",
+            "authority": "official"
+          }
+        ],
+        "authority_summary": {
+          "official_count": 1,
+          "kokai_normalized_count": 0,
+          "ai_summary_count": 0,
+          "ai_estimate_count": 0
+        }
+      }
+    }
+  ]
+}

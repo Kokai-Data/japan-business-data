@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "kokai": {
+      "url": "https://mcp.kokai.ai/functions/v1/mcp-server"
+    }
+  }
+}

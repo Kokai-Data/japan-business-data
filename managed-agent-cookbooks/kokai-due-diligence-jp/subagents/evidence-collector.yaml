@@ -1,0 +1,39 @@
+name: evidence-collector
+description: |
+  Collects evidence for a Japanese company DD brief: gBizINFO entity profile,
+  J-Grants subsidies signals, citation refs. Returns a structured evidence
+  bundle to the brief-composer subagent.
+type: leaf-worker
+
+input_schema:
+  type: object
+  required: ["corporate_number"]
+  properties:
+    corporate_number:
+      type: string
+      pattern: "^\\d{13}$"
+
+output_schema:
+  type: object
+  required: ["entity_profile", "evidence_refs"]
+  properties:
+    entity_profile:
+      type: object
+      description: "gBizINFO entity profile (financials, capital, employees, certifications, shareholders)"
+    subsidy_signals:
+      type: array
+      items:
+        type: object
+    evidence_refs:
+      type: array
+      items:
+        type: object
+      description: "cite_required source URLs from kokai.get_evidence_refs"
+
+permissions:
+  tools:
+    - kokai.get_entity_profile
+    - kokai.search_subsidies
+    - kokai.get_evidence_refs
+
+audit_log: true

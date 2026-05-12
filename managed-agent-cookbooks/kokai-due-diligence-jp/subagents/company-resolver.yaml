@@ -1,0 +1,32 @@
+name: company-resolver
+description: |
+  Resolves a Japanese company input (name OR 13-digit 法人番号) to a verified
+  corporate_number using kokai.search_company. Returns the verified
+  corporate_number to the orchestrator.
+type: leaf-worker
+
+input_schema:
+  type: object
+  required: ["query"]
+  properties:
+    query:
+      type: string
+      description: "Company name (Japanese / kana / Latin / hiragana, 2+ chars) OR 13-digit 法人番号"
+
+output_schema:
+  type: object
+  required: ["corporate_number"]
+  properties:
+    corporate_number:
+      type: string
+      pattern: "^\\d{13}$"
+    name:
+      type: string
+    location:
+      type: string
+
+permissions:
+  tools:
+    - kokai.search_company
+
+audit_log: true
