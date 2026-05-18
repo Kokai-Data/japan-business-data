@@ -5,7 +5,7 @@ Self-contained agent plugin for 3-tier competitor brief (Japanese company).
 ## Install
 
 ```bash
-claude plugin install competitor-brief-jp@kokai-for-public-business-intelligence-jp
+claude plugin install competitor-brief-jp@japan-business-intelligence
 ```
 
 ## What it does

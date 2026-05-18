@@ -5,7 +5,7 @@ Self-contained agent plugin for 1-page Japanese company due diligence briefs.
 ## Install
 
 ```bash
-claude plugin install due-diligence-jp@kokai-for-public-business-intelligence-jp
+claude plugin install due-diligence-jp@japan-business-intelligence
 ```
 
 ## What it does

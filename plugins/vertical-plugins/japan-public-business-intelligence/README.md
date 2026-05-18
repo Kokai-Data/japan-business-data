@@ -5,7 +5,7 @@ Vertical plugin: shared skills and MCP connector for Japanese public business in
 ## Install
 
 ```bash
-claude plugin install japan-public-business-intelligence@kokai-for-public-business-intelligence-jp
+claude plugin install japan-public-business-intelligence@japan-business-intelligence
 ```
 
 ## What it provides

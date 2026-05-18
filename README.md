@@ -29,7 +29,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 ## Repository layout
 
 ```
-kokai-for-public-business-intelligence-jp/
+japan-business-intelligence/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── plugins/
@@ -55,9 +55,9 @@ kokai-for-public-business-intelligence-jp/
 ### Path 1: Claude Code (CLI)
 
 ```bash
-claude plugin marketplace add Nihonbashi-AI-Lab/kokai-for-public-business-intelligence-jp
-claude plugin install japan-public-business-intelligence@kokai-for-public-business-intelligence-jp
-claude plugin install meeting-prep-jp@kokai-for-public-business-intelligence-jp
+claude plugin marketplace add Kokai-Data/japan-business-intelligence
+claude plugin install japan-public-business-intelligence@japan-business-intelligence
+claude plugin install meeting-prep-jp@japan-business-intelligence
 ```
 
 ### Path 2: Claude Cowork (UI)
