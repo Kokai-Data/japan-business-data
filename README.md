@@ -91,7 +91,13 @@ scripts/deploy-managed-agent.sh kokai-due-diligence-jp
 
 | MCP server | URL | Source |
 |---|---|---|
-| kokai | `https://mcp.kokai.ai/functions/v1/mcp-server` | gBizINFO + J-Grants + 国税庁 (planned) |
+| kokai | `https://mcp.kokai.ai/functions/v1/mcp-server` | gBizINFO + J-Grants + **国税庁 法人番号 (Sprint 7p-2 で integration 完了、2026-05-18)** |
+
+### 3-Source Authority Chain
+
+1. **gBizINFO** (経済産業省) — company business intelligence
+2. **J-Grants** (中小企業庁 + デジタル庁) — government subsidies
+3. **国税庁 法人番号 公表 Web-API** — authoritative corporate-number master + change history
 
 ## Boundary (士業 safety, REQUIRED)
 

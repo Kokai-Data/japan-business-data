@@ -41,6 +41,10 @@ AGENT_SKILL_BUNDLES = {
     "due-diligence-jp": [
         "gbizinfo-company-search",
         "gbizinfo-entity-lookup",
+        # Sprint 7p-2 (2026-05-18): NTA lookup for change history (社名 / 移転 / 合併 / 解散)
+        # is critical for due diligence workflows
+        "nta-corporate-number-lookup",
+        "nta-corporate-name-search",
         "evidence-citation-builder",
         "kokai-due-diligence-prompt",
         "authority-strip-formatter",
@@ -49,6 +53,8 @@ AGENT_SKILL_BUNDLES = {
     "competitor-brief-jp": [
         "gbizinfo-company-search",
         "gbizinfo-entity-lookup",
+        # Sprint 7p-2: NTA lookup for authoritative status (active / dissolved / merged)
+        "nta-corporate-number-lookup",
         "kokai-competitor-brief-prompt",
         "authority-strip-formatter",
         "shigyo-boundary-disclaimer",
