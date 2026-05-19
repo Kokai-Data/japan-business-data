@@ -45,6 +45,11 @@ AGENT_SKILL_BUNDLES = {
         # is critical for due diligence workflows
         "nta-corporate-number-lookup",
         "nta-corporate-name-search",
+        # Sprint 14+8 (2026-05-19): EDINET 4th SoT for listed-company IR (annual /
+        # quarterly / large-shareholding / TOB / governance), critical for M&A DD
+        # of listed targets + investor / analyst use cases
+        "edinet-document-search",
+        "edinet-company-ir-tracker",
         "evidence-citation-builder",
         "kokai-due-diligence-prompt",
         "authority-strip-formatter",
