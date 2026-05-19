@@ -1,8 +1,21 @@
 # Kokai for Public Business Intelligence — Japan
 
-**AI-citable Japanese public business intelligence** for Claude — corporate registries (gBizINFO + 国税庁 法人番号 公表 Web-API), government subsidies (J-Grants), with 士業 boundary safety. **For AI builders, Japanese 士業 (行政書士 / 中小企業診断士 / 公認会計士 / 税理士), and investment professionals.**
+**AI-citable Japanese public business intelligence** for **all AI agents** — corporate registries (gBizINFO + 国税庁 法人番号 公表 Web-API), government subsidies (J-Grants), with 士業 boundary safety. **For AI builders (Claude / Cursor / Codex / OpenAI App Server / all MCP clients), Japanese 士業 (行政書士 / 中小企業診断士 / 公認会計士 / 税理士), and investment professionals.**
 
-This is the **Japan-market equivalent of [Anthropic's `financial-services` agent templates](https://github.com/anthropics/financial-services)**, focused on Japanese public canonical data sources. It is open source under Apache License 2.0 and packages [Kokai Data](https://kokai.ai) (an AI-citable public business intelligence MCP server) as Claude plugins and managed agents.
+This is the **Japan-market equivalent of [Anthropic's `financial-services` agent templates](https://github.com/anthropics/financial-services)**, focused on Japanese public canonical data sources. It is open source under Apache License 2.0 and packages [Kokai Data](https://kokai.ai) (an AI-citable public business intelligence MCP server) as both **a universal MCP server (for all AI clients)** and **Claude plugins + managed agents (for Anthropic ecosystem sugar)**.
+
+## Architecture — Universal MCP server + Anthropic Plugin sugar (2 layers)
+
+Kokai Data follows a **2-layer architecture** for AI agent ecosystem neutrality:
+
+| Layer | What | Who can use it |
+|---|---|---|
+| **L1: Universal MCP server** | `https://mcp.kokai.ai/functions/v1/mcp-server` — implements MCP spec 2025-06-18 | **All MCP clients**: Claude Code / Claude Cowork / Claude Managed Agents / Claude.ai (connectors layer) / Cursor / Codex / OpenAI App Server / any custom MCP client. Setup via `.mcp.json` config (no Plugin required). |
+| **L2: Anthropic Plugin sugar** (this repo) | `Kokai-Data/japan-business-intelligence` — bundles Skills, slash commands, managed-agent cookbook, and auto-registers the MCP server | **Anthropic ecosystem users**: Claude Code (CLI + Desktop App) / Claude Cowork / Claude Managed Agents. Plugin install auto-configures everything (no manual `.mcp.json` editing). |
+
+**Non-Claude clients (Cursor / Codex / etc.) do NOT need to install this Plugin** — they connect to the MCP server directly via their own `.mcp.json` (see Path 4 below). The Plugin layer is purely Anthropic-ecosystem distribution sugar (auto-install / auto-update / Skills auto-invocation).
+
+This dual approach matches Kokai's brand promise: **AI agent ecosystem neutral**, not tied to any single AI provider.
 
 ## Disclaimer
 
@@ -85,15 +98,25 @@ japan-business-intelligence/
 └── NOTICE
 ```
 
-## Getting started — 3 paths
+## Getting started — 4 paths
 
-### Path 1: Claude Code (CLI)
+### Path 1A: Claude Code (CLI)
 
 ```bash
 claude plugin marketplace add Kokai-Data/japan-business-intelligence
 claude plugin install japan-public-business-intelligence@japan-business-intelligence
 claude plugin install meeting-prep-jp@japan-business-intelligence
 ```
+
+### Path 1B: Claude Code Desktop App (Windows / macOS, no CLI required)
+
+1. Open Claude Code Desktop App → sidebar **Customize**
+2. Under **個人用プラグイン (Personal plugins)** click the **`+`** button
+3. Select **プラグインを作成 → マーケットプレイスを追加 (Create plugin → Add marketplace)**
+4. Enter repository: `Kokai-Data/japan-business-intelligence` (or full URL `https://github.com/Kokai-Data/japan-business-intelligence`)
+5. After the marketplace is added, install the plugins you need (the `japan-public-business-intelligence` vertical plugin + any agent plugins like `meeting-prep-jp`, `due-diligence-jp`, etc.)
+
+This is the most user-friendly path for users not comfortable with CLI. The Plugin auto-registers the kokai MCP server, so no `.mcp.json` editing is required.
 
 ### Path 2: Claude Cowork (UI)
 
@@ -107,6 +130,24 @@ claude plugin install meeting-prep-jp@japan-business-intelligence
 export ANTHROPIC_API_KEY=sk-ant-...
 scripts/deploy-managed-agent.sh kokai-due-diligence-jp
 ```
+
+### Path 4: Non-Anthropic MCP clients — direct MCP server connection (no Plugin install)
+
+If you use **Cursor**, **Codex**, **OpenAI App Server**, or any other MCP-compatible client, you don't need to install this Plugin. Connect directly to the kokai MCP server via your client's MCP config (`.mcp.json` or equivalent):
+
+```json
+{
+  "mcpServers": {
+    "kokai": {
+      "url": "https://mcp.kokai.ai/functions/v1/mcp-server"
+    }
+  }
+}
+```
+
+The MCP server exposes all kokai tools (gBizINFO / J-Grants / 国税庁 法人番号) directly. You won't get the Skills / slash commands bundled in this Plugin, but you get full data access via the MCP tools.
+
+**Skills + slash commands** (e.g., `/meeting-prep`, `/due-diligence`) are Anthropic-ecosystem-specific sugar bundled in this Plugin — they're convenience layers for Claude Code / Cowork / Managed Agents, not part of the MCP protocol. Non-Anthropic clients build their own workflows on top of the raw MCP tools.
 
 ## How it fits together
 
