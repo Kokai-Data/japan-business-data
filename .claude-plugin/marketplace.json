@@ -7,7 +7,7 @@
     {
       "name": "japan-public-business-intelligence",
       "source": "./plugins/vertical-plugins/japan-public-business-intelligence",
-      "description": "Japanese public business intelligence: corporate registries (gBizINFO), government subsidies (J-Grants), and AI-citable evidence via the Kokai Data MCP server."
+      "description": "Japanese public business intelligence: 6-source Authority Chain (gBizINFO + J-Grants + 国税庁 法人番号 + EDINET + e-Gov 法令 + 官公需情報ポータル) and AI-citable evidence via the Kokai Data MCP server."
     },
     {
       "name": "meeting-prep-jp",
@@ -33,6 +33,16 @@
       "name": "subsidy-landscape-jp",
       "source": "./plugins/agent-plugins/subsidy-landscape-jp",
       "description": "Top-N Japanese subsidies for an industry or use-purpose theme."
+    },
+    {
+      "name": "legal-research-jp",
+      "source": "./plugins/agent-plugins/legal-research-jp",
+      "description": "Japanese legal research from e-Gov 法令検索 (デジタル庁) — cited statute lookup + verbatim 条文 fetch with 弁護士 / 行政書士 / 司法書士 boundary."
+    },
+    {
+      "name": "procurement-discovery-jp",
+      "source": "./plugins/agent-plugins/procurement-discovery-jp",
+      "description": "Japanese government procurement (Call for Tender) discovery from 官公需情報ポータル (中小企業庁) — Phase 1 = CFT notice discovery only."
     }
   ]
 }
