@@ -1,6 +1,6 @@
 ---
 name: shigyo-boundary-disclaimer
-description: Append the 士業 (certified Japanese advisor) boundary disclaimer to Kokai-generated outputs. Required for any brief that touches subsidy 適格性, 申請可否, legal, tax, or professional judgment topics.
+description: Append the 士業 (certified Japanese advisor) boundary disclaimer to Kokai-generated outputs. Required for any brief that touches subsidy 適格性, 申請可否, legal, tax, or professional judgment topics. 日本語 keyword: 士業 boundary / 士業 disclaimer / 専門家確認 disclaimer / 弁護士 / 行政書士 / 中小企業診断士 / 公認会計士 / 税理士 確認 disclaimer.
 ---
 
 ## When to use

@@ -1,6 +1,6 @@
 ---
 name: nta-corporate-number-lookup
-description: Get authoritative Japanese corporate-number record from the National Tax Agency (国税庁) with change history (社名変更 / 移転 / 合併 / 解散). Use for M&A DD, KYC verification, dissolved-company detection, gBizINFO fallback.
+description: Get authoritative Japanese corporate-number record from the National Tax Agency (国税庁) with change history (社名変更 / 移転 / 合併 / 解散). Use for M&A DD, KYC verification, dissolved-company detection, gBizINFO fallback. 日本語 keyword: 国税庁 法人番号 lookup / 異動履歴 確認 / 解散合併 確認 / 法人 master 取得 / NTA 法人番号.
 ---
 
 ## When to use

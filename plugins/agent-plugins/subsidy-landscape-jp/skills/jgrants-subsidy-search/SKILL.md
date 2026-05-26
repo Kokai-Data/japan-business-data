@@ -1,6 +1,6 @@
 ---
 name: jgrants-subsidy-search
-description: Search J-Grants public registry for Japanese government subsidies by keyword (industry / theme / use purpose, 2+ chars). Returns matches with id, title, target area, deadline, and max amount.
+description: Search J-Grants public registry for Japanese government subsidies by keyword (industry / theme / use purpose, 2+ chars). Returns matches with id, title, target area, deadline, and max amount. 日本語 keyword: 補助金検索 / 補助金 一覧 / 補助金スキャン / 業種別補助金 / J-Grants 検索.
 ---
 
 ## When to use

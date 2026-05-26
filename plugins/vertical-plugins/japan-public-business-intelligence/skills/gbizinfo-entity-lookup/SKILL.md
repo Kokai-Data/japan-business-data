@@ -1,6 +1,6 @@
 ---
 name: gbizinfo-entity-lookup
-description: Look up a Japanese company's detailed profile (financials, capital, employees, certifications) from gBizINFO via the kokai MCP server. Use when you have a 13-digit 法人番号.
+description: Look up a Japanese company's detailed profile (financials, capital, employees, certifications) from gBizINFO via the kokai MCP server. Use when you have a 13-digit 法人番号. 日本語 keyword: 法人情報取得 / 企業情報検索 / 法人番号で企業調査 / 商談相手調査 / 経営情報取得 / 会社プロファイル取得.
 ---
 
 ## When to use

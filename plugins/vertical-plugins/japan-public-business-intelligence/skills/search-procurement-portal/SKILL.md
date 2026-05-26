@@ -1,6 +1,6 @@
 ---
 name: search-procurement-portal
-description: Search Japanese government procurement notices (Call for Tender, 公告) from the 官公需情報ポータル (中小企業庁) REST + XML API. Phase 1 = CFT discovery only (project name, issuing organization, category, procedure type). Phase 2 (future) = awarded results, supplier history, price signals are NOT included. Use for sales lead discovery, bid opportunity research, government client targeting.
+description: Search Japanese government procurement notices (Call for Tender, 公告) from the 官公需情報ポータル (中小企業庁) REST + XML API. Phase 1 = CFT discovery only (project name, issuing organization, category, procedure type). Phase 2 (future) = awarded results, supplier history, price signals are NOT included. Use for sales lead discovery, bid opportunity research, government client targeting. 日本語 keyword: 調達公告検索 / 入札公告 検索 / 官公需 検索 / CFT 検索 / 公共調達 検索.
 ---
 
 ## When to use

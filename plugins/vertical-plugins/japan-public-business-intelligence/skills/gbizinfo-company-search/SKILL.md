@@ -1,6 +1,6 @@
 ---
 name: gbizinfo-company-search
-description: Search for a Japanese company by name (Japanese / kana / Latin / hiragana, 2+ chars) when you do not have the 13-digit 法人番号. Returns matches from the gBizINFO registry.
+description: Search for a Japanese company by name (Japanese / kana / Latin / hiragana, 2+ chars) when you do not have the 13-digit 法人番号. Returns matches from the gBizINFO registry. 日本語 keyword: 会社検索 / 法人検索 / 企業検索 / 会社名から法人番号 / 法人名で企業検索.
 ---
 
 ## When to use

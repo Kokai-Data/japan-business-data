@@ -1,6 +1,6 @@
 ---
 name: search-egov-laws
-description: Search Japanese laws / cabinet orders / ministerial ordinances via the e-Gov 法令検索 API v2 (デジタル庁). Returns law metadata (law_id / law_num / title / enforcement_date / law_type). Use for legal research, statute lookup, regulatory mapping, M&A due-diligence-law verification.
+description: Search Japanese laws / cabinet orders / ministerial ordinances via the e-Gov 法令検索 API v2 (デジタル庁). Returns law metadata (law_id / law_num / title / enforcement_date / law_type). Use for legal research, statute lookup, regulatory mapping, M&A due-diligence-law verification. 日本語 keyword: 法令検索 / 日本法令 検索 / e-Gov 法令 / 法律 keyword 検索 / 業法 確認.
 ---
 
 ## When to use

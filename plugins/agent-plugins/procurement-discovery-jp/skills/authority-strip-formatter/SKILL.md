@@ -1,6 +1,6 @@
 ---
 name: authority-strip-formatter
-description: Format the ACBS 4-layer authority strip in Kokai-generated outputs. Apply to all briefs that include Kokai data.
+description: Format the ACBS 4-layer authority strip in Kokai-generated outputs. Apply to all briefs that include Kokai data. 日本語 keyword: 出典階層 / 4 階層 出典 / 引用層 / authority strip 整形 / ACBS 4 層.
 ---
 
 ## When to use

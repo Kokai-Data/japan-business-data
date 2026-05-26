@@ -1,6 +1,6 @@
 ---
 name: kokai-subsidy-landscape-prompt
-description: Use the kokai MCP server's `kokai_subsidy_landscape_scan_jp` prompt to scan top-N Japanese subsidies for an industry or use-purpose theme.
+description: Use the kokai MCP server's `kokai_subsidy_landscape_scan_jp` prompt to scan top-N Japanese subsidies for an industry or use-purpose theme. 日本語 keyword: 補助金スキャン プロンプト / 補助金 landscape frame / Top-N 補助金 framework.
 ---
 
 ## When to use

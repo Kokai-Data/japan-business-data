@@ -6,6 +6,11 @@ triggers:
   - "subsidy fit"
   - "subsidy eligibility check"
   - "補助金の適合性"
+  - "補助金マッチ"
+  - "補助金マッチング"
+  - "補助金 候補確認"
+  - "補助金 signal"
+  - "補助金との相性"
 ---
 
 ## Role

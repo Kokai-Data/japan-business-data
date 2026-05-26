@@ -1,6 +1,6 @@
 ---
 name: kokai-due-diligence-prompt
-description: Use the kokai MCP server's `kokai_due_diligence_jp` prompt to prepare a 1-page Japanese company DD brief from public canonical sources.
+description: Use the kokai MCP server's `kokai_due_diligence_jp` prompt to prepare a 1-page Japanese company DD brief from public canonical sources. 日本語 keyword: デューデリ プロンプト / 企業調査 frame / DD frame / デューデリジェンス framework.
 ---
 
 ## When to use

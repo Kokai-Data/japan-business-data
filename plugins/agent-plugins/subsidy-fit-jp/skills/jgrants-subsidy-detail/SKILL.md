@@ -1,6 +1,6 @@
 ---
 name: jgrants-subsidy-detail
-description: Get detailed J-Grants subsidy information (full eligibility criteria, deadlines, max amount, application form URLs) by subsidy_id from `jgrants-subsidy-search`.
+description: Get detailed J-Grants subsidy information (full eligibility criteria, deadlines, max amount, application form URLs) by subsidy_id from `jgrants-subsidy-search`. 日本語 keyword: 補助金詳細 / 補助金情報 取得 / J-Grants 詳細 / subsidy_id で詳細取得.
 ---
 
 ## When to use

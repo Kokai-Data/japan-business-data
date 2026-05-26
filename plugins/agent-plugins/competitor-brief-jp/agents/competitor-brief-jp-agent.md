@@ -6,6 +6,11 @@ triggers:
   - "competitor brief"
   - "peer comparison"
   - "M&A benchmarking"
+  - "競合調査"
+  - "競合分析"
+  - "競合企業 調査"
+  - "競合他社 リサーチ"
+  - "ベンチマーク 調査"
 ---
 
 ## Role

@@ -1,6 +1,6 @@
 ---
 name: edinet-document-search
-description: Search Japanese securities disclosure documents (有価証券報告書 / 四半期 / 半期 / 臨時 / 大量保有 / 公開買付 / 内部統制 等) from FSA EDINET v2 API. Filter by date, docTypeCode, edinetCode, or 法人番号. Use for IR research, M&A signal tracking, listed company DD prep.
+description: Search Japanese securities disclosure documents (有価証券報告書 / 四半期 / 半期 / 臨時 / 大量保有 / 公開買付 / 内部統制 等) from FSA EDINET v2 API. Filter by date, docTypeCode, edinetCode, or 法人番号. Use for IR research, M&A signal tracking, listed company DD prep. 日本語 keyword: EDINET 文書検索 / 有価証券報告書 検索 / 開示書類 検索 / 金商法開示 検索.
 ---
 
 ## When to use

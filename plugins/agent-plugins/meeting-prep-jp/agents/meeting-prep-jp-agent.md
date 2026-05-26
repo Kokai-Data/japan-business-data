@@ -6,6 +6,12 @@ triggers:
   - "meeting prep"
   - "pre-meeting brief"
   - "クライアント brief"
+  - "商談準備"
+  - "打合せ準備"
+  - "営業前リサーチ"
+  - "商談相手の調査"
+  - "商談前 brief"
+  - "面談前ブリーフ"
 ---
 
 ## Role

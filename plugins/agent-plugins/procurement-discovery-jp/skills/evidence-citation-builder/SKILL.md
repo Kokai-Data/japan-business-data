@@ -1,6 +1,6 @@
 ---
 name: evidence-citation-builder
-description: Get citation records (source URL, retrieved_at, authority level) for a Kokai canonical record by record_id. Returns direct public source refs only (AI-derived evidence excluded).
+description: Get citation records (source URL, retrieved_at, authority level) for a Kokai canonical record by record_id. Returns direct public source refs only (AI-derived evidence excluded). 日本語 keyword: 出典 構築 / 引用 構築 / evidence 引用 / citation 取得 / record_id から出典取得.
 ---
 
 ## When to use

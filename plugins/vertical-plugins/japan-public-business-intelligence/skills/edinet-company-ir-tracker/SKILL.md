@@ -1,6 +1,6 @@
 ---
 name: edinet-company-ir-tracker
-description: Get recent EDINET disclosures for one Japanese company (by 法人番号 OR edinetCode) clustered into Kokai signal overlays — annual / quarterly / extraordinary / TOB / large-shareholding / governance / event. Auto-resolves 法人番号 → EDINET code. Use for M&A target diligence, investment research, listed-company DD prep.
+description: Get recent EDINET disclosures for one Japanese company (by 法人番号 OR edinetCode) clustered into Kokai signal overlays — annual / quarterly / extraordinary / TOB / large-shareholding / governance / event. Auto-resolves 法人番号 → EDINET code. Use for M&A target diligence, investment research, listed-company DD prep. 日本語 keyword: 上場企業 IR / IR 追跡 / EDINET 開示 / 有価証券報告書 取得 / 上場企業 disclosure 追跡.
 ---
 
 ## When to use

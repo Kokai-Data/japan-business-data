@@ -1,6 +1,6 @@
 ---
 name: kokai-subsidy-fit-prompt
-description: Use the kokai MCP server's `kokai_subsidy_fit_jp` prompt to prepare a 3-axis fit signal (regional / industry / scale) for a Japanese company x subsidy pair.
+description: Use the kokai MCP server's `kokai_subsidy_fit_jp` prompt to prepare a 3-axis fit signal (regional / industry / scale) for a Japanese company x subsidy pair. 日本語 keyword: 補助金マッチ プロンプト / 補助金 fit frame / 3 軸 fit framework.
 ---
 
 ## When to use

@@ -1,6 +1,6 @@
 ---
 name: get-egov-laws-data
-description: Fetch the full text / 条文 / chapter structure of a specific Japanese law from e-Gov 法令検索 API v2 (デジタル庁). Use after search-egov-laws to retrieve actual statute body, article-by-article. Returns structured law content (chapters / articles / paragraphs) with public 公式 citation.
+description: Fetch the full text / 条文 / chapter structure of a specific Japanese law from e-Gov 法令検索 API v2 (デジタル庁). Use after search-egov-laws to retrieve actual statute body, article-by-article. Returns structured law content (chapters / articles / paragraphs) with public 公式 citation. 日本語 keyword: 条文取得 / 法令本文 / e-Gov 法令データ / 法律全文取得 / law_id で条文取得.
 ---
 
 ## When to use

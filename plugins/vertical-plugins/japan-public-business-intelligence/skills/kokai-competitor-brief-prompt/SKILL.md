@@ -1,6 +1,6 @@
 ---
 name: kokai-competitor-brief-prompt
-description: Use the kokai MCP server's `kokai_competitor_corporate_brief_jp` prompt to prepare a 3-tier competitor brief (overview / scale / certifications) for a Japanese company.
+description: Use the kokai MCP server's `kokai_competitor_corporate_brief_jp` prompt to prepare a 3-tier competitor brief (overview / scale / certifications) for a Japanese company. 日本語 keyword: 競合 brief プロンプト / 競合調査 frame / 競合 brief framework.
 ---
 
 ## When to use

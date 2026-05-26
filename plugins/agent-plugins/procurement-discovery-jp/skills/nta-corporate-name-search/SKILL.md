@@ -1,6 +1,6 @@
 ---
 name: nta-corporate-name-search
-description: Search Japanese corporate registry by name via the National Tax Agency (国税庁) Web-API. Returns corporations with 13-digit corporate numbers. Use when gBizINFO does not have the company or for cross-validation.
+description: Search Japanese corporate registry by name via the National Tax Agency (国税庁) Web-API. Returns corporations with 13-digit corporate numbers. Use when gBizINFO does not have the company or for cross-validation. 日本語 keyword: 国税庁 法人名検索 / 法人番号取得 by 名前 / NTA 法人検索 / 名前から法人番号.
 ---
 
 ## When to use
