@@ -2,6 +2,13 @@
 
 All notable changes to this repository follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conventions.
 
+## [0.7.1] — 2026-06-01 — Marketplace renamed → `japan-business-data`
+
+### Changed
+
+- **Marketplace renamed** `japan-business-intelligence` → **`japan-business-data`** (and GitHub repo `Kokai-Data/japan-business-intelligence` → `Kokai-Data/japan-business-data`). Install handle is now `<plugin>@japan-business-data` — shorter, and aligned with Anthropic's domain-style marketplace naming (`financial-services` / `life-sciences`). Plugin names are unchanged (e.g. `japan-public-business-intelligence`). Old GitHub URLs auto-redirect.
+- **Action for existing users**: re-add the marketplace (`/plugin marketplace add Kokai-Data/japan-business-data`) and re-install plugins under the new `@japan-business-data` identity; remove the old `japan-business-intelligence` marketplace.
+
 ## [0.7.0] — 2026-05-26 — 日本語 slash command alias 追加 (Approach B + C combined)
 
 ### Added

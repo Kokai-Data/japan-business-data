@@ -5,7 +5,7 @@ Self-contained agent plugin for Japanese subsidy landscape scan (sector / strate
 ## Install
 
 ```bash
-claude plugin install subsidy-landscape-jp@japan-business-intelligence
+claude plugin install subsidy-landscape-jp@japan-business-data
 ```
 
 ## What it does

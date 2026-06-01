@@ -11,7 +11,7 @@ Kokai Data follows a **2-layer architecture** for AI agent ecosystem neutrality:
 | Layer | What | Who can use it |
 |---|---|---|
 | **L1: Universal MCP server** | `https://mcp.kokai.ai/functions/v1/mcp-server` — implements MCP spec 2025-06-18 | **All MCP clients**: Claude Code / Claude Cowork / Claude Managed Agents / Claude.ai (connectors layer) / Cursor / Codex / OpenAI App Server / any custom MCP client. Setup via `.mcp.json` config (no Plugin required). |
-| **L2: Anthropic Plugin sugar** (this repo) | `Kokai-Data/japan-business-intelligence` — bundles Skills, slash commands, managed-agent cookbook, and auto-registers the MCP server | **Anthropic ecosystem users**: Claude Code (CLI + Desktop App) / Claude Cowork / Claude Managed Agents. Plugin install auto-configures everything (no manual `.mcp.json` editing). |
+| **L2: Anthropic Plugin sugar** (this repo) | `Kokai-Data/japan-business-data` — bundles Skills, slash commands, managed-agent cookbook, and auto-registers the MCP server | **Anthropic ecosystem users**: Claude Code (CLI + Desktop App) / Claude Cowork / Claude Managed Agents. Plugin install auto-configures everything (no manual `.mcp.json` editing). |
 
 **Non-Claude clients (Cursor / Codex / etc.) do NOT need to install this Plugin** — they connect to the MCP server directly via their own `.mcp.json` (see Path 4 below). The Plugin layer is purely Anthropic-ecosystem distribution sugar (auto-install / auto-update / Skills auto-invocation).
 
@@ -113,7 +113,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 ## Repository layout
 
 ```
-japan-business-intelligence/
+japan-business-data/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── plugins/
@@ -144,12 +144,12 @@ japan-business-intelligence/
 ### Path 1A: Claude Code (CLI)
 
 ```bash
-claude plugin marketplace add Kokai-Data/japan-business-intelligence
-claude plugin install japan-public-business-intelligence@japan-business-intelligence
-claude plugin install meeting-prep-jp@japan-business-intelligence
+claude plugin marketplace add Kokai-Data/japan-business-data
+claude plugin install japan-public-business-intelligence@japan-business-data
+claude plugin install meeting-prep-jp@japan-business-data
 # New Sprint 14+12/14+13 plugins:
-claude plugin install legal-research-jp@japan-business-intelligence
-claude plugin install procurement-discovery-jp@japan-business-intelligence
+claude plugin install legal-research-jp@japan-business-data
+claude plugin install procurement-discovery-jp@japan-business-data
 ```
 
 ### Path 1B: Claude Code Desktop App (Windows / macOS, no CLI required)
@@ -157,7 +157,7 @@ claude plugin install procurement-discovery-jp@japan-business-intelligence
 1. Open Claude Code Desktop App → sidebar **Customize**
 2. Under **個人用プラグイン (Personal plugins)** click the **`+`** button
 3. Select **プラグインを作成 → マーケットプレイスを追加 (Create plugin → Add marketplace)**
-4. Enter repository: `Kokai-Data/japan-business-intelligence` (or full URL `https://github.com/Kokai-Data/japan-business-intelligence`)
+4. Enter repository: `Kokai-Data/japan-business-data` (or full URL `https://github.com/Kokai-Data/japan-business-data`)
 5. After the marketplace is added, install the plugins you need (the `japan-public-business-intelligence` vertical plugin + any agent plugins like `meeting-prep-jp`, `due-diligence-jp`, `legal-research-jp`, `procurement-discovery-jp` etc.)
 
 This is the most user-friendly path for users not comfortable with CLI. The Plugin auto-registers the kokai MCP server, so no `.mcp.json` editing is required.

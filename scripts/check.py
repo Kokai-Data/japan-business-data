@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 check.py — Lint manifests and verify cross-file references for the
-japan-business-intelligence Plugin repo (Kokai-Data/japan-business-intelligence).
+japan-business-data Plugin repo (Kokai-Data/japan-business-data).
 
 Validates:
   1. .claude-plugin/marketplace.json exists, has required schema fields
@@ -161,7 +161,7 @@ def check_managed_agent_cookbooks():
 
 
 def main():
-    print("Linting japan-business-intelligence Plugin repo (Kokai-Data org)...")
+    print("Linting japan-business-data Plugin repo (Kokai-Data org)...")
     check_marketplace()
     check_all_plugin_manifests()
     check_vertical_plugins()

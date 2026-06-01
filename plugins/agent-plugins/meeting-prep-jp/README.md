@@ -5,7 +5,7 @@ Self-contained agent plugin for preparing 1-page Japanese company meeting briefs
 ## Install
 
 ```bash
-claude plugin install meeting-prep-jp@japan-business-intelligence
+claude plugin install meeting-prep-jp@japan-business-data
 ```
 
 ## What it does
