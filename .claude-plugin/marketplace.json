@@ -6,41 +6,49 @@
   "plugins": [
     {
       "name": "japan-public-business-intelligence",
+      "displayName": "日本公開ビジネスデータ統合 (Japan Public BI)",
       "source": "./plugins/vertical-plugins/japan-public-business-intelligence",
       "description": "6-source Authority Chain — gBizINFO + J-Grants + 国税庁 法人番号 + EDINET + e-Gov 法令 + 官公需情報ポータル — for AI-citable Japanese public business intelligence via the Kokai Data MCP server. 日本語 slash: /商談準備 /企業調査 /補助金マッチ /競合調査 /補助金スキャン /法令調査 /調達公告検索 + 英語 alias (/meeting-prep etc., 後方互換維持)."
     },
     {
       "name": "meeting-prep-jp",
+      "displayName": "商談準備 (Meeting Prep)",
       "source": "./plugins/agent-plugins/meeting-prep-jp",
       "description": "商談準備 — 日本企業の商談前 1-page cited brief 生成。Prepare a 1-page cited pre-meeting brief for a Japanese company. 日本語 slash: /商談準備、英語 alias: /meeting-prep (後方互換維持)."
     },
     {
       "name": "subsidy-fit-jp",
+      "displayName": "補助金マッチ (Subsidy Fit)",
       "source": "./plugins/agent-plugins/subsidy-fit-jp",
       "description": "補助金マッチ — 日本企業 × 補助金の 3 軸 (地域 / 業種 / 規模) fit signal 生成 (Kokai は判定者ではなく signal 提示者)。3-axis fit signal for a Japanese company × subsidy pair. 日本語 slash: /補助金マッチ、英語 alias: /subsidy-fit."
     },
     {
       "name": "due-diligence-jp",
+      "displayName": "企業調査 (Due Diligence)",
       "source": "./plugins/agent-plugins/due-diligence-jp",
       "description": "企業調査 — 日本企業の 1 ページ デューデリ brief (public canonical sources)。1-page DD brief from public canonical sources. 日本語 slash: /企業調査、英語 alias: /due-diligence (後方互換維持)."
     },
     {
       "name": "competitor-brief-jp",
+      "displayName": "競合調査 (Competitor Brief)",
       "source": "./plugins/agent-plugins/competitor-brief-jp",
       "description": "競合調査 — 日本企業の 3-tier 競合 brief (概観 / 規模 / 認定)。3-tier competitor brief for a Japanese company. 日本語 slash: /競合調査、英語 alias: /competitor-brief."
     },
     {
       "name": "subsidy-landscape-jp",
+      "displayName": "補助金スキャン (Subsidy Landscape)",
       "source": "./plugins/agent-plugins/subsidy-landscape-jp",
       "description": "補助金スキャン — 業種・用途テーマで Top-N 日本補助金 landscape を scan (signal overlay 形式、47 都道府県並列)。Top-N subsidies for an industry / use-purpose theme. 日本語 slash: /補助金スキャン、英語 alias: /subsidy-landscape."
     },
     {
       "name": "legal-research-jp",
+      "displayName": "法令調査 (Legal Research)",
       "source": "./plugins/agent-plugins/legal-research-jp",
       "description": "法令調査 — 日本法令 (e-Gov 法令検索、デジタル庁) を keyword で検索 or 法令 ID で条文 verbatim 取得 + 弁護士 / 行政書士 / 司法書士 boundary。Japanese legal research from e-Gov 法令検索. 日本語 slash: /法令調査、英語 alias: /legal-research."
     },
     {
       "name": "procurement-discovery-jp",
+      "displayName": "調達公告検索 (Procurement Discovery)",
       "source": "./plugins/agent-plugins/procurement-discovery-jp",
       "description": "調達公告検索 — 日本の政府調達公告 (官公需情報ポータル、中小企業庁) を検索、Phase 1 = CFT (Call for Tender) discovery only。Japanese government procurement Call for Tender discovery. 日本語 slash: /調達公告検索、英語 alias: /procurement-discovery."
     }
