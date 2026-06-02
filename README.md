@@ -42,7 +42,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 
 | Category | Count | Examples |
 |---|---|---|
-| Agent plugins (self-contained workflows) | **7** | meeting-prep-jp, subsidy-fit-jp, due-diligence-jp, competitor-brief-jp, subsidy-landscape-jp, **legal-research-jp**, **procurement-discovery-jp** |
+| Agent plugins (self-contained workflows) | **7** | proposal-prep-jp, subsidy-fit-jp, due-diligence-jp, competitor-brief-jp, subsidy-landscape-jp, **legal-research-jp**, **procurement-discovery-jp** |
 | Vertical plugin (shared skill bundle + MCP connector) | 1 | japan-public-business-intelligence (16 skills) |
 | Managed-agent cookbook (Claude Managed Agents deployment template) | 1 | kokai-due-diligence-jp |
 
@@ -50,7 +50,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 
 | Agent | Function | Authority source |
 |---|---|---|
-| `meeting-prep-jp` | 1-page brief for a Japanese company before a meeting (cited public data) | gBizINFO + 国税庁 |
+| `proposal-prep-jp` | 1-page brief for a Japanese company before a meeting (cited public data) | gBizINFO + 国税庁 |
 | `subsidy-fit-jp` | 3-axis fit signal (regional / industry / scale) for a Japanese company × subsidy pair | gBizINFO + J-Grants |
 | `due-diligence-jp` | 1-page due diligence brief on a Japanese company (gBizINFO entity + evidence refs + EDINET IR) | gBizINFO + 国税庁 + EDINET |
 | `competitor-brief-jp` | 3-tier competitor brief (overview / scale / certifications) for a Japanese company | gBizINFO + 国税庁 |
@@ -64,7 +64,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 
 | 日本語 | 英語 alias | 機能 |
 |---|---|---|
-| `/商談準備` | `/meeting-prep` | 商談前 1 ページ ブリーフ生成 (gBizINFO + 国税庁 + J-Grants landscape) |
+| `/提案準備` | `/proposal-prep` | 提案前 1 ページ ブリーフ生成 (gBizINFO + 国税庁 + J-Grants landscape) |
 | `/企業調査` | `/due-diligence` | 1 ページ デューデリ brief (gBizINFO + 国税庁 + EDINET 上場時) |
 | `/補助金マッチ` | `/subsidy-fit` | 3 軸 (地域 / 業種 / 規模) fit signal (Kokai は判定者ではなく signal 提示者) |
 | `/競合調査` | `/competitor-brief` | 3-tier 競合 brief (概観 / 規模 / 認定) |
@@ -72,7 +72,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 | `/法令調査` | `/legal-research` | 日本法令 keyword 検索 + 条文 verbatim 取得 (e-Gov, デジタル庁) |
 | `/調達公告検索` | `/procurement-discovery` | 政府調達 公告 discovery (Phase 1 = CFT only, 官公需情報ポータル) |
 
-**自然言語でも auto-invoke 可能** (例: 「商談準備して」「企業調査お願い」「○○ 法人の経営情報取得」「医薬品関連の法令を調査して」「システム開発の公共調達を検索」)。日本語 keyword は agent.md `triggers` (7 件、各 5-7 keyword 追加) と vertical + agent SKILL.md `description` (59 mirror、19 unique skill) に組み込み済。
+**自然言語でも auto-invoke 可能** (例: 「提案準備して」「企業調査お願い」「○○ 法人の経営情報取得」「医薬品関連の法令を調査して」「システム開発の公共調達を検索」)。日本語 keyword は agent.md `triggers` (7 件、各 5-7 keyword 追加) と vertical + agent SKILL.md `description` (59 mirror、19 unique skill) に組み込み済。
 
 ### 士業セーフティ表現
 
@@ -80,11 +80,11 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 
 ## Use cases (concrete examples)
 
-### 1. Meeting preparation in 30 seconds
+### 1. Proposal preparation in 30 seconds
 
 > "Tell me about 株式会社サンプル製造 (法人番号 1234567890123) before my meeting"
 
-→ The `meeting-prep-jp` agent invokes `gbizinfo-entity-lookup` + `nta-corporate-number-lookup` and produces a 1-page brief with cited financials, employees, certifications, registry change history, and a 4-layer authority strip + 士業 boundary disclaimer.
+→ The `proposal-prep-jp` agent invokes `gbizinfo-entity-lookup` + `nta-corporate-number-lookup` and produces a 1-page brief with cited financials, employees, certifications, registry change history, and a 4-layer authority strip + 士業 boundary disclaimer.
 
 ### 2. M&A due diligence with registry change history + 上場企業 IR
 
@@ -118,7 +118,7 @@ japan-business-data/
 │   └── marketplace.json
 ├── plugins/
 │   ├── agent-plugins/
-│   │   ├── meeting-prep-jp/
+│   │   ├── proposal-prep-jp/
 │   │   ├── subsidy-fit-jp/
 │   │   ├── due-diligence-jp/
 │   │   ├── competitor-brief-jp/
@@ -127,7 +127,7 @@ japan-business-data/
 │   │   └── procurement-discovery-jp/      # ← Sprint 14+13 (官公需、中小企業庁)
 │   └── vertical-plugins/
 │       └── japan-public-business-intelligence/
-│           ├── commands/                  # 7 slash commands (meeting-prep / due-diligence / subsidy-fit / competitor-brief / subsidy-landscape / legal-research / procurement-discovery)
+│           ├── commands/                  # 7 slash commands (proposal-prep / due-diligence / subsidy-fit / competitor-brief / subsidy-landscape / legal-research / procurement-discovery)
 │           └── skills/                    # 16 shared skills
 ├── managed-agent-cookbooks/
 │   └── kokai-due-diligence-jp/
@@ -146,7 +146,7 @@ japan-business-data/
 ```bash
 claude plugin marketplace add Kokai-Data/japan-business-data
 claude plugin install japan-public-business-intelligence@japan-business-data
-claude plugin install meeting-prep-jp@japan-business-data
+claude plugin install proposal-prep-jp@japan-business-data
 # New Sprint 14+12/14+13 plugins:
 claude plugin install legal-research-jp@japan-business-data
 claude plugin install procurement-discovery-jp@japan-business-data
@@ -158,7 +158,7 @@ claude plugin install procurement-discovery-jp@japan-business-data
 2. Under **個人用プラグイン (Personal plugins)** click the **`+`** button
 3. Select **プラグインを作成 → マーケットプレイスを追加 (Create plugin → Add marketplace)**
 4. Enter repository: `Kokai-Data/japan-business-data` (or full URL `https://github.com/Kokai-Data/japan-business-data`)
-5. After the marketplace is added, install the plugins you need (the `japan-public-business-intelligence` vertical plugin + any agent plugins like `meeting-prep-jp`, `due-diligence-jp`, `legal-research-jp`, `procurement-discovery-jp` etc.)
+5. After the marketplace is added, install the plugins you need (the `japan-public-business-intelligence` vertical plugin + any agent plugins like `proposal-prep-jp`, `due-diligence-jp`, `legal-research-jp`, `procurement-discovery-jp` etc.)
 
 This is the most user-friendly path for users not comfortable with CLI. The Plugin auto-registers the kokai MCP server, so no `.mcp.json` editing is required.
 
@@ -191,13 +191,13 @@ If you use **Cursor**, **Codex**, **OpenAI App Server**, or any other MCP-compat
 
 The MCP server exposes all kokai tools (gBizINFO / J-Grants / 国税庁 法人番号 / EDINET / **e-Gov 法令検索** / **官公需情報ポータル**) directly. You won't get the Skills / slash commands bundled in this Plugin, but you get full data access via the MCP tools (6-source Authority Chain + signal overlay).
 
-**Skills + slash commands** (e.g., `/meeting-prep`, `/due-diligence`, `/legal-research`, `/procurement-discovery`) are Anthropic-ecosystem-specific sugar bundled in this Plugin — they're convenience layers for Claude Code / Cowork / Managed Agents, not part of the MCP protocol. Non-Anthropic clients build their own workflows on top of the raw MCP tools.
+**Skills + slash commands** (e.g., `/proposal-prep`, `/due-diligence`, `/legal-research`, `/procurement-discovery`) are Anthropic-ecosystem-specific sugar bundled in this Plugin — they're convenience layers for Claude Code / Cowork / Managed Agents, not part of the MCP protocol. Non-Anthropic clients build their own workflows on top of the raw MCP tools.
 
 ## How it fits together
 
-- **Agents** are workflows that own end-to-end processes (e.g., meeting prep, legal research, procurement discovery).
+- **Agents** are workflows that own end-to-end processes (e.g., proposal prep, legal research, procurement discovery).
 - **Skills** are reusable expertise (e.g., `gbizinfo-entity-lookup`, `search-egov-laws`, `search-procurement-portal`) living in the vertical plugin, bundled into agents.
-- **Commands** are explicitly-triggered slash commands (e.g., `/meeting-prep`, `/legal-research`, `/procurement-discovery`).
+- **Commands** are explicitly-triggered slash commands (e.g., `/proposal-prep`, `/legal-research`, `/procurement-discovery`).
 - **MCP servers** (declared in `.mcp.json`) wire to external data; here, the [kokai MCP server](https://mcp.kokai.ai/functions/v1/mcp-server) provides Japan public business intelligence.
 - **Managed-agent cookbooks** package the same skills as deployable templates for Claude Managed Agents API.
 

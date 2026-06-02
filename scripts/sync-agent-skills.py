@@ -22,7 +22,7 @@ VERTICAL_SKILLS = (
 AGENT_PLUGINS_DIR = REPO_ROOT / "plugins" / "agent-plugins"
 
 AGENT_SKILL_BUNDLES = {
-    "meeting-prep-jp": [
+    "proposal-prep-jp": [
         "gbizinfo-company-search",
         "gbizinfo-entity-lookup",
         "kokai-due-diligence-prompt",

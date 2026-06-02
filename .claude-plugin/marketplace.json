@@ -8,13 +8,13 @@
       "name": "japan-public-business-intelligence",
       "displayName": "日本公開ビジネスデータ統合 (Japan Public BI)",
       "source": "./plugins/vertical-plugins/japan-public-business-intelligence",
-      "description": "6-source Authority Chain — gBizINFO + J-Grants + 国税庁 法人番号 + EDINET + e-Gov 法令 + 官公需情報ポータル — for AI-citable Japanese public business intelligence via the Kokai Data MCP server. 日本語 slash: /商談準備 /企業調査 /補助金マッチ /競合調査 /補助金スキャン /法令調査 /調達公告検索 + 英語 alias (/meeting-prep etc., 後方互換維持)."
+      "description": "6-source Authority Chain — gBizINFO + J-Grants + 国税庁 法人番号 + EDINET + e-Gov 法令 + 官公需情報ポータル — for AI-citable Japanese public business intelligence via the Kokai Data MCP server. 日本語 slash: /提案準備 /企業調査 /補助金マッチ /競合調査 /補助金スキャン /法令調査 /調達公告検索 + 英語 alias (/proposal-prep etc., 後方互換維持)."
     },
     {
-      "name": "meeting-prep-jp",
-      "displayName": "商談準備 (Meeting Prep)",
-      "source": "./plugins/agent-plugins/meeting-prep-jp",
-      "description": "商談準備 — 日本企業の商談前 1-page cited brief 生成。Prepare a 1-page cited pre-meeting brief for a Japanese company. 日本語 slash: /商談準備、英語 alias: /meeting-prep (後方互換維持)."
+      "name": "proposal-prep-jp",
+      "displayName": "提案準備 (Proposal Prep)",
+      "source": "./plugins/agent-plugins/proposal-prep-jp",
+      "description": "提案準備 — 日本企業の提案前 1-page cited brief 生成。Prepare a 1-page cited brief for a Japanese company to support a proposal. 日本語 slash: /提案準備、英語 alias: /proposal-prep (後方互換維持)."
     },
     {
       "name": "subsidy-fit-jp",

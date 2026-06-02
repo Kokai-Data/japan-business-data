@@ -1,11 +1,11 @@
-# meeting-prep-jp
+# proposal-prep-jp
 
-Self-contained agent plugin for preparing 1-page Japanese company meeting briefs.
+Self-contained agent plugin for preparing 1-page Japanese company proposal briefs.
 
 ## Install
 
 ```bash
-claude plugin install meeting-prep-jp@japan-business-data
+claude plugin install proposal-prep-jp@japan-business-data
 ```
 
 ## What it does

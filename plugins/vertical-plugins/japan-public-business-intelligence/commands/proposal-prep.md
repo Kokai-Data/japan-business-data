@@ -1,11 +1,11 @@
 ---
-name: meeting-prep
-description: /meeting-prep <13-digit 法人番号 OR company name> — generate a 1-page Japanese company meeting brief
+name: proposal-prep
+description: /proposal-prep <13-digit 法人番号 OR company name> — generate a 1-page Japanese company proposal brief
 ---
 
-# /meeting-prep
+# /proposal-prep
 
-Run the `meeting-prep-jp` agent workflow on the provided Japanese company.
+Run the `proposal-prep-jp` agent workflow on the provided Japanese company.
 
 Argument: 13-digit 法人番号 (corporate number) OR company name.
 
@@ -13,8 +13,8 @@ If a company name is provided, the agent will call `search_company` first to con
 
 Usage:
 
-- `/meeting-prep <13-digit 法人番号>` (direct, fastest)
-- `/meeting-prep <company name>` (search candidates, then user confirms)
+- `/proposal-prep <13-digit 法人番号>` (direct, fastest)
+- `/proposal-prep <company name>` (search candidates, then user confirms)
 
 The brief includes:
 

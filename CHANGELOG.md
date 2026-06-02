@@ -2,6 +2,14 @@
 
 All notable changes to this repository follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conventions.
 
+## [0.7.2] — 2026-06-02 — `meeting-prep-jp` → `proposal-prep-jp` rename
+
+### Changed
+
+- **Plugin renamed `meeting-prep-jp` → `proposal-prep-jp`**; slash commands `/商談準備` (and English `/meeting-prep`) → `/提案準備` (and `/proposal-prep`); displayName `商談準備 (Meeting Prep)` → `提案準備 (Proposal Prep)`; agent `meeting-prep-jp-agent` → `proposal-prep-jp-agent`. 完全置換 — 旧 `/商談準備`・`/meeting-prep` の後方互換 alias は廃止。Hero persona (士業・コンサルの提案業務) と整合。
+- **Action for existing users**: uninstall the old `meeting-prep-jp` plugin and install `proposal-prep-jp@japan-business-data`.
+- 汎用 trigger (`面談準備` / `meeting prep` / `打合せ準備` / `営業前リサーチ` 等) は自然言語 auto-invoke の discoverability のため維持。共有 skill (`gbizinfo-entity-lookup` の `商談相手調査` keyword 等) は変更なし。
+
 ## [0.7.1] — 2026-06-01 — Marketplace renamed → `japan-business-data`
 
 ### Changed

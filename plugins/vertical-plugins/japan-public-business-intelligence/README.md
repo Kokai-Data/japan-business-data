@@ -17,7 +17,7 @@ claude plugin install japan-public-business-intelligence@japan-business-data
   - Evidence citation (1 skill)
   - 4 high-level prompts (due-diligence, subsidy-fit, subsidy-landscape, competitor-brief)
   - 2 common skills (authority-strip-formatter, shigyo-boundary-disclaimer)
-- **5 slash commands**: `/meeting-prep`, `/subsidy-fit`, `/due-diligence`, `/competitor-brief`, `/subsidy-landscape`
+- **5 slash commands**: `/proposal-prep`, `/subsidy-fit`, `/due-diligence`, `/competitor-brief`, `/subsidy-landscape`
 - **1 MCP server connection**: `kokai` at `https://mcp.kokai.ai/functions/v1/mcp-server`
 
 ## 3-Source Authority Chain (Sprint 7p-2 完成)

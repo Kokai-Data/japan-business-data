@@ -1,8 +1,0 @@
-{
-  "name": "meeting-prep-jp",
-  "version": "0.1.0",
-  "description": "Prepare a 1-page brief for a Japanese company before a meeting using cited public data (gBizINFO + J-Grants).",
-  "author": {
-    "name": "Kokai Data"
-  }
-}

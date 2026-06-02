@@ -1,16 +1,16 @@
 ---
-name: meeting-prep-jp-agent
-description: Japanese company meeting preparation agent — generates a 1-page brief with cited public data.
+name: proposal-prep-jp-agent
+description: Japanese company proposal preparation agent — generates a 1-page brief with cited public data.
 triggers:
   - "面談準備"
   - "meeting prep"
   - "pre-meeting brief"
   - "クライアント brief"
-  - "商談準備"
+  - "提案準備"
   - "打合せ準備"
   - "営業前リサーチ"
-  - "商談相手の調査"
-  - "商談前 brief"
+  - "提案先の調査"
+  - "提案前 brief"
   - "面談前ブリーフ"
 ---
 
