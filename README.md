@@ -43,7 +43,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 | Category | Count | Examples |
 |---|---|---|
 | Agent plugins (self-contained workflows) | **7** | proposal-prep-jp, subsidy-fit-jp, due-diligence-jp, competitor-brief-jp, subsidy-landscape-jp, **legal-research-jp**, **procurement-discovery-jp** |
-| Vertical plugin (shared skill bundle + MCP connector) | 1 | japan-public-business-intelligence (16 skills) |
+| Vertical plugin (shared skill bundle + MCP connector) | 1 | japan-public-business-intelligence (19 skills) |
 | Managed-agent cookbook (Claude Managed Agents deployment template) | 1 | kokai-due-diligence-jp |
 
 ## Agents (7 named templates)
@@ -128,7 +128,7 @@ japan-business-data/
 │   └── vertical-plugins/
 │       └── japan-public-business-intelligence/
 │           ├── commands/                  # 7 slash commands (proposal-prep / due-diligence / subsidy-fit / competitor-brief / subsidy-landscape / legal-research / procurement-discovery)
-│           └── skills/                    # 16 shared skills
+│           └── skills/                    # 19 shared skills
 ├── managed-agent-cookbooks/
 │   └── kokai-due-diligence-jp/
 ├── scripts/
