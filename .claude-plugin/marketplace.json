@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "japan-public-business-intelligence",
+      "name": "kokai-data",
       "displayName": "Kokai Data: 日本公開ビジネスデータ統合 (Japan Public BI)",
-      "source": "./plugins/vertical-plugins/japan-public-business-intelligence",
-      "description": "6-source Authority Chain — gBizINFO + J-Grants + 国税庁 法人番号 + EDINET + e-Gov 法令 + 官公需情報ポータル — for AI-citable Japanese public business intelligence via the Kokai Data MCP server. 日本語 slash: /提案準備 /企業調査 /補助金マッチ /競合調査 /補助金スキャン /法令調査 /調達公告検索 + 英語 alias (/proposal-prep etc., 後方互換維持)."
+      "source": "./plugins/vertical-plugins/kokai-data",
+      "description": "6-source Authority Chain — gBizINFO + J-Grants + 国税庁 法人番号 + EDINET + e-Gov 法令 + 官公需情報ポータル — for AI-citable Japanese public business intelligence via the Kokai Data MCP server. 日本語 slash: /提案準備 /企業調査 /補助金マッチ /競合調査 /補助金スキャン /法令調査 /調達公告検索 /通関分類 + 英語 alias (/proposal-prep etc., 後方互換維持)."
     },
     {
       "name": "proposal-prep-jp",

@@ -17,6 +17,27 @@ Kokai Data follows a **2-layer architecture** for AI agent ecosystem neutrality:
 
 This dual approach matches Kokai's brand promise: **AI agent ecosystem neutral**, not tied to any single AI provider.
 
+## Naming
+
+| | |
+|---|---|
+| **Brand** | Kokai Data |
+| **Marketplace / repository** | `japan-business-data` |
+| **Plugin (recommended install)** | `kokai-data` |
+| **MCP server** | `mcp.kokai.ai` |
+| **Trade sub-brand** | Kokai Trade |
+
+The recommended install is the **`kokai-data`** plugin (`/plugin install kokai-data@japan-business-data`) — the brand-bearing core plugin that bundles the MCP server, slash commands, and skills. The marketplace handle stays `japan-business-data` (region-per-marketplace).
+
+## Migration from legacy plugin name
+
+The core plugin was renamed from `japan-public-business-intelligence` to `kokai-data` (for brand visibility in the Claude Code plugin list). If you installed the legacy plugin, please re-install:
+
+1. Uninstall the legacy plugin `japan-public-business-intelligence` (or remove it in the GUI plugin list).
+2. Install the new plugin: `/plugin install kokai-data@japan-business-data`.
+
+Your existing slash commands (`/企業調査`, `/提案準備`, etc.) work the same after re-install.
+
 ## Disclaimer
 
 Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適格性, 申請可否, legal interpretation, 訴訟戦略, bid eligibility, tax, or professional judgments are out of scope and must be verified by a certified Japanese 士業 (registered advisor: 行政書士 / 中小企業診断士 / 公認会計士 / 税理士 / 弁護士 / 司法書士). Never fictionalize company, subsidy, statute, or procurement facts — use only Kokai tool/prompt outputs and cited public sources.
@@ -43,7 +64,7 @@ Kokai provides **signal / 確認材料 / context, not decisions**. Subsidy 適�
 | Category | Count | Examples |
 |---|---|---|
 | Agent plugins (self-contained workflows) | **7** | proposal-prep-jp, subsidy-fit-jp, due-diligence-jp, competitor-brief-jp, subsidy-landscape-jp, **legal-research-jp**, **procurement-discovery-jp** |
-| Vertical plugin (shared skill bundle + MCP connector) | 1 | japan-public-business-intelligence (19 skills) |
+| Vertical plugin (shared skill bundle + MCP connector) | 1 | kokai-data (19 skills) |
 | Managed-agent cookbook (Claude Managed Agents deployment template) | 1 | kokai-due-diligence-jp |
 
 ## Agents (7 named templates)
@@ -126,7 +147,7 @@ japan-business-data/
 │   │   ├── legal-research-jp/             # ← Sprint 14+12 (e-Gov 法令、デジタル庁)
 │   │   └── procurement-discovery-jp/      # ← Sprint 14+13 (官公需、中小企業庁)
 │   └── vertical-plugins/
-│       └── japan-public-business-intelligence/
+│       └── kokai-data/
 │           ├── commands/                  # 7 slash commands (proposal-prep / due-diligence / subsidy-fit / competitor-brief / subsidy-landscape / legal-research / procurement-discovery)
 │           └── skills/                    # 19 shared skills
 ├── managed-agent-cookbooks/
@@ -145,7 +166,7 @@ japan-business-data/
 
 ```bash
 claude plugin marketplace add Kokai-Data/japan-business-data
-claude plugin install japan-public-business-intelligence@japan-business-data
+claude plugin install kokai-data@japan-business-data
 claude plugin install proposal-prep-jp@japan-business-data
 # New Sprint 14+12/14+13 plugins:
 claude plugin install legal-research-jp@japan-business-data
@@ -158,7 +179,7 @@ claude plugin install procurement-discovery-jp@japan-business-data
 2. Under **個人用プラグイン (Personal plugins)** click the **`+`** button
 3. Select **プラグインを作成 → マーケットプレイスを追加 (Create plugin → Add marketplace)**
 4. Enter repository: `Kokai-Data/japan-business-data` (or full URL `https://github.com/Kokai-Data/japan-business-data`)
-5. After the marketplace is added, install the plugins you need (the `japan-public-business-intelligence` vertical plugin + any agent plugins like `proposal-prep-jp`, `due-diligence-jp`, `legal-research-jp`, `procurement-discovery-jp` etc.)
+5. After the marketplace is added, install the plugins you need (the `kokai-data` vertical plugin + any agent plugins like `proposal-prep-jp`, `due-diligence-jp`, `legal-research-jp`, `procurement-discovery-jp` etc.)
 
 This is the most user-friendly path for users not comfortable with CLI. The Plugin auto-registers the kokai MCP server, so no `.mcp.json` editing is required.
 
@@ -205,7 +226,7 @@ The MCP server exposes all kokai tools (gBizINFO / J-Grants / 国税庁 法人�
 
 | Plugin | Focus | MCP server |
 |---|---|---|
-| `japan-public-business-intelligence` | Japanese corporate registries, subsidies, listed-company IR, statutory law, government procurement, evidence citations | [kokai](https://mcp.kokai.ai) |
+| `kokai-data` | Japanese corporate registries, subsidies, listed-company IR, statutory law, government procurement, evidence citations | [kokai](https://mcp.kokai.ai) |
 
 ## MCP integrations
 

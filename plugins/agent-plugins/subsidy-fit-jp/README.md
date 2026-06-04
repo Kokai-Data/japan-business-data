@@ -19,7 +19,7 @@ Computes 3-axis fit signal (regional / industry / scale) using ONLY public canon
 
 ## Dependencies
 
-- Vertical plugin: `japan-public-business-intelligence`
+- Vertical plugin: `kokai-data`
 
 Skills used:
 

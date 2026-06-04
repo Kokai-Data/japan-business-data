@@ -19,7 +19,7 @@ Generates a 1-page brief on a target Japanese company using:
 
 ## Dependencies
 
-- Vertical plugin: `japan-public-business-intelligence` (provides MCP server URL `kokai` + bundled skills)
+- Vertical plugin: `kokai-data` (provides MCP server URL `kokai` + bundled skills)
 
 Skills used:
 

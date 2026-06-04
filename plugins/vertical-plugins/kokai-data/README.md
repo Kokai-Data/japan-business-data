@@ -1,11 +1,11 @@
-# japan-public-business-intelligence
+# kokai-data
 
 Vertical plugin: shared skills and MCP connector for Japanese public business intelligence (gBizINFO, J-Grants, kokai evidence index).
 
 ## Install
 
 ```bash
-claude plugin install japan-public-business-intelligence@japan-business-data
+claude plugin install kokai-data@japan-business-data
 ```
 
 ## What it provides

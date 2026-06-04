@@ -26,7 +26,7 @@ Produces a 3-tier competitor brief (overview / scale / certifications) for a Jap
 
 ## Dependencies
 
-- Vertical plugin: `japan-public-business-intelligence`
+- Vertical plugin: `kokai-data`
 
 Skills used:
 

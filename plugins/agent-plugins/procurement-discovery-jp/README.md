@@ -35,7 +35,7 @@ For Phase 2 data, consult a commercial procurement DB (e.g., 帝国データバ�
 
 ## Dependencies
 
-- Vertical plugin: `japan-public-business-intelligence`
+- Vertical plugin: `kokai-data`
 
 Skills used:
 

@@ -5,7 +5,7 @@ sync-agent-skills.py — Propagate skills from vertical-plugin to agent-plugins.
 Each agent-plugin uses a subset of vertical-plugin skills, copied into
 the agent's own skills/ directory (Anthropic financial-services pattern).
 
-Source of truth: plugins/vertical-plugins/japan-public-business-intelligence/skills/
+Source of truth: plugins/vertical-plugins/kokai-data/skills/
 Destination: plugins/agent-plugins/<slug>/skills/
 
 Configuration: AGENT_SKILL_BUNDLES below defines which skills each agent gets.
@@ -17,7 +17,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 VERTICAL_SKILLS = (
-    REPO_ROOT / "plugins" / "vertical-plugins" / "japan-public-business-intelligence" / "skills"
+    REPO_ROOT / "plugins" / "vertical-plugins" / "kokai-data" / "skills"
 )
 AGENT_PLUGINS_DIR = REPO_ROOT / "plugins" / "agent-plugins"
 

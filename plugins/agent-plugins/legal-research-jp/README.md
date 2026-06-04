@@ -25,7 +25,7 @@ Produces cited legal research outputs using ONLY public canonical sources:
 
 ## Dependencies
 
-- Vertical plugin: `japan-public-business-intelligence`
+- Vertical plugin: `kokai-data`
 
 Skills used:
 

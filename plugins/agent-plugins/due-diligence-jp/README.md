@@ -19,7 +19,7 @@ Produces a 1-page DD brief on a target Japanese company using ONLY public canoni
 
 ## Dependencies
 
-- Vertical plugin: `japan-public-business-intelligence`
+- Vertical plugin: `kokai-data`
 
 Skills used:
 
