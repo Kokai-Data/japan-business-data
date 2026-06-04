@@ -5,7 +5,7 @@ Self-contained agent plugin for preparing 1-page Japanese company proposal brief
 ## Install
 
 ```bash
-claude plugin install proposal-prep-jp@japan-business-data
+claude plugin install proposal-prep-jp@kokai
 ```
 
 ## What it does

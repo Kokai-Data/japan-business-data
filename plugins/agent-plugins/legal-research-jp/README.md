@@ -5,7 +5,7 @@ Self-contained agent plugin for Japanese legal research — cited statute lookup
 ## Install
 
 ```bash
-claude plugin install legal-research-jp@japan-business-data
+claude plugin install legal-research-jp@kokai
 ```
 
 ## What it does

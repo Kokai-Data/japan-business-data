@@ -22,19 +22,20 @@ This dual approach matches Kokai's brand promise: **AI agent ecosystem neutral**
 | | |
 |---|---|
 | **Brand** | Kokai Data |
-| **Marketplace / repository** | `japan-business-data` |
+| **Marketplace handle** | `kokai` |
+| **GitHub repository** | `Kokai-Data/japan-business-data` |
 | **Plugin (recommended install)** | `kokai-data` |
 | **MCP server** | `mcp.kokai.ai` |
 | **Trade sub-brand** | Kokai Trade |
 
-The recommended install is the **`kokai-data`** plugin (`/plugin install kokai-data@japan-business-data`) — the brand-bearing core plugin that bundles the MCP server, slash commands, and skills. The marketplace handle stays `japan-business-data` (region-per-marketplace).
+The recommended install is the **`kokai-data`** plugin (`/plugin install kokai-data@kokai`) — the brand-bearing core plugin that bundles the MCP server, slash commands, and skills. The marketplace handle is `kokai` (brand-first); the GitHub repo stays `Kokai-Data/japan-business-data`.
 
 ## Migration from legacy plugin name
 
 The core plugin was renamed from `japan-public-business-intelligence` to `kokai-data` (for brand visibility in the Claude Code plugin list). If you installed the legacy plugin, please re-install:
 
 1. Uninstall the legacy plugin `japan-public-business-intelligence` (or remove it in the GUI plugin list).
-2. Install the new plugin: `/plugin install kokai-data@japan-business-data`.
+2. Install the new plugin: `/plugin install kokai-data@kokai`.
 
 Your existing slash commands (`/企業調査`, `/提案準備`, etc.) work the same after re-install.
 
@@ -166,11 +167,11 @@ japan-business-data/
 
 ```bash
 claude plugin marketplace add Kokai-Data/japan-business-data
-claude plugin install kokai-data@japan-business-data
-claude plugin install proposal-prep-jp@japan-business-data
+claude plugin install kokai-data@kokai
+claude plugin install proposal-prep-jp@kokai
 # New Sprint 14+12/14+13 plugins:
-claude plugin install legal-research-jp@japan-business-data
-claude plugin install procurement-discovery-jp@japan-business-data
+claude plugin install legal-research-jp@kokai
+claude plugin install procurement-discovery-jp@kokai
 ```
 
 ### Path 1B: Claude Code Desktop App (Windows / macOS, no CLI required)

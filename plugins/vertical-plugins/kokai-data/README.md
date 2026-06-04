@@ -5,7 +5,7 @@ Vertical plugin: shared skills and MCP connector for Japanese public business in
 ## Install
 
 ```bash
-claude plugin install kokai-data@japan-business-data
+claude plugin install kokai-data@kokai
 ```
 
 ## What it provides

@@ -2,6 +2,14 @@
 
 All notable changes to this repository follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conventions.
 
+## [0.8.0] — 2026-06-04 — Marketplace renamed to `kokai` (brand-first) + displayName cleanup
+
+### Changed
+
+- **Marketplace renamed** `japan-business-data` to **`kokai`** (brand-first). Install handle is now `<plugin>@kokai` (e.g. `/plugin install kokai-data@kokai`) so the marketplace tab in the plugin directory reads as the brand. The GitHub repo stays `Kokai-Data/japan-business-data` (`/plugin marketplace add Kokai-Data/japan-business-data` still works). Future regional siblings would be brand-first too (e.g. `kokai-us`).
+- **Plugin displayNames cleaned** -- removed the redundant `Kokai Data:` prefix (the brand already shows on each catalog card via the marketplace owner). Cards now read as `<Japanese label> (English)`, Japanese-primary with an English aid for the two-sided audience (Japanese professionals + English-speaking AI builders).
+- **Action for existing users**: remove the old marketplace (`/plugin marketplace remove japan-business-data`), then re-add it (`/plugin marketplace add Kokai-Data/japan-business-data`) so it registers under the new `kokai` handle; re-install plugins under `@kokai`.
+
 ## [0.7.2] — 2026-06-02 — `meeting-prep-jp` → `proposal-prep-jp` rename
 
 ### Changed

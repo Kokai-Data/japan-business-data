@@ -5,7 +5,7 @@ Self-contained agent plugin for 3-axis subsidy fit signal (Japanese company × J
 ## Install
 
 ```bash
-claude plugin install subsidy-fit-jp@japan-business-data
+claude plugin install subsidy-fit-jp@kokai
 ```
 
 ## What it does

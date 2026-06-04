@@ -5,7 +5,7 @@ Self-contained agent plugin for Japanese government procurement (Call for Tender
 ## Install
 
 ```bash
-claude plugin install procurement-discovery-jp@japan-business-data
+claude plugin install procurement-discovery-jp@kokai
 ```
 
 ## What it does
