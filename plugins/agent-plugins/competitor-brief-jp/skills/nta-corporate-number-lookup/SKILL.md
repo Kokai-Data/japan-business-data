@@ -37,7 +37,7 @@ The response includes:
 - **process_summary**: human-readable summary like "3 件の異動履歴あり (商号変更 / 国内所在地の変更 ...)"
 - **process_label**: 公式 process classification (01=新規 / 11=商号変更 / 12=移転 / 71=合併解散 / 81=抹消 / 99=削除)
 - **source_authority**: "official" (公式 cite_required layer)
-- **terms_of_use**: cite gBizINFO terms
+- **terms_of_use**: attribution + disclaimer for the 国税庁 法人番号公表サイト (cite "出典: 国税庁法人番号公表サイト" and note that the 国税庁 is the SoT for corporate-number master data)
 
 ## Differentiation from gBizINFO
 
@@ -49,7 +49,7 @@ The response includes:
 | gBizINFO 未登録法人 | ❌ 取得不可 | **✅ カバー** |
 | 財務 / 株主 / 認定 | ✅ 充実 | ❌ なし |
 
-Pair this skill with `gbizinfo-entity-lookup` for full coverage.
+Pair this skill with the `get_entity_profile` tool (gBizINFO) for full coverage.
 
 ## Boundary
 

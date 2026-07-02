@@ -65,12 +65,12 @@ For each law:
 | **法令本文 / 改正履歴** | ❌ | ❌ | — | ❌ | **✅ 公式** | — |
 | 政府調達公告 | — | — | — | — | — | ✅ |
 
-Pair with `get-egov-laws-data` to fetch the full text / 条文 of a specific law after discovery.
+Pair with `get_egov_laws_data` to fetch the full text / 条文 of a specific law after discovery.
 
 ## Use cases
 
-- **DD legal verification**: After due-diligence-jp identifies a target in a regulated industry, search e-Gov for applicable laws (e.g., 金融商品取引法 / 個人情報保護法 / 労働基準法) and cite specific law_id in the brief.
-- **Subsidy compliance check**: Combine with subsidy-fit-jp — find the parent law of a J-Grants subsidy (e.g., 中小企業基本法 for 中小企業向け subsidies) to provide regulatory context.
+- **DD legal verification**: After a due-diligence brief identifies a target in a regulated industry, search e-Gov for applicable laws (e.g., 金融商品取引法 / 個人情報保護法 / 労働基準法) and cite specific law_id in the brief.
+- **Subsidy compliance check**: Combine with subsidy data (`search_subsidies` / `kokai_subsidy_fit_jp` prompt) — find the parent law of a J-Grants subsidy (e.g., 中小企業基本法 for 中小企業向け subsidies) to provide regulatory context.
 - **M&A legal landscape**: Identify all 業法 (industry-specific laws) applicable to a target.
 
 ## Boundary

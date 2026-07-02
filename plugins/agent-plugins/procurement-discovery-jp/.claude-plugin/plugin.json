@@ -1,6 +1,6 @@
 {
   "name": "procurement-discovery-jp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Japanese government procurement (Call for Tender) discovery from 官公需情報ポータル (中小企業庁). Phase 1 = bid notice discovery only — awarded results / price signals deferred to Phase 2.",
   "author": {
     "name": "Kokai Data"

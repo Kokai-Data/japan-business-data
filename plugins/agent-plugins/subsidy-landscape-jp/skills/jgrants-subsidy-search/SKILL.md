@@ -41,7 +41,7 @@ For each subsidy, present:
 ## Constraints
 
 - The `target_area_search` field returns regional subsidies; clarify with the user whether they want national-only, prefecture-specific, or all.
-- Subsidies returned are signal / 確認材料 — fit / 適格性 must be verified separately (see `kokai-subsidy-fit-prompt` skill).
+- Subsidies returned are signal / 確認材料 — fit / 適格性 must be verified separately (e.g. via the kokai MCP server's `kokai_subsidy_fit_jp` prompt).
 
 ## Boundary
 

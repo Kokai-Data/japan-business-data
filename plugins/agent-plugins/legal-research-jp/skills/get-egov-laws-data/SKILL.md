@@ -7,7 +7,7 @@ description: Fetch the full text / 条文 / chapter structure of a specific Japa
 
 Use this skill when:
 
-- You have a `law_id` from `search-egov-laws` and need the actual statute text.
+- You have a `law_id` from a prior `search_egov_laws` call and need the actual statute text.
 - The user asks "what does Article X of the Y Act say?" (e.g., "個人情報保護法 第15条").
 - DD / legal research requires verbatim citation of statute text.
 - You need to quote specific provisions in a due diligence brief or subsidy-fit analysis.
@@ -21,12 +21,12 @@ Call the kokai MCP server's `get_egov_laws_data` tool:
 {
   "name": "get_egov_laws_data",
   "arguments": {
-    "law_id": "<law_id from search-egov-laws, e.g., 338AC0000000154>"
+    "law_id": "<law_id from search_egov_laws, e.g., 338AC0000000154>"
   }
 }
 ```
 
-`law_id` is required (obtained from `search-egov-laws` results).
+`law_id` is required (obtained from `search_egov_laws` results).
 
 ## Output structure
 
@@ -41,16 +41,16 @@ Call the kokai MCP server's `get_egov_laws_data` tool:
 - `attribution_text`: `"出典: e-Gov 法令検索 (デジタル庁) https://laws.e-gov.go.jp/law/<law_id>"`
 - `source_url`: direct e-Gov URL for the law's HTML view
 
-## Workflow pattern (paired with search-egov-laws)
+## Workflow pattern (paired with search_egov_laws)
 
 ```
 1. User asks about a Japanese law topic
    ↓
-2. search-egov-laws (keyword search) → list of candidate laws (10-20)
+2. search_egov_laws (keyword search) → list of candidate laws (10-20)
    ↓
 3. User / agent selects one law_id
    ↓
-4. get-egov-laws-data (law_id) → full statute text + structure
+4. get_egov_laws_data (law_id) → full statute text + structure
    ↓
 5. Quote specific 条 / 項 / 号 with attribution_text + source_url
 ```

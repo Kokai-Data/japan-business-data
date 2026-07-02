@@ -57,7 +57,7 @@ For each result, present:
 - assignment_date (法人番号指定年月日)
 - is_latest (最新フラグ)
 
-After identifying the target company, call `nta-corporate-number-lookup` skill with the 法人番号 to get full record + change history.
+After identifying the target company, call the `get_nta_corporate_record` tool with the 法人番号 to get full record + change history.
 
 ## Differentiation from gBizINFO
 
@@ -69,4 +69,4 @@ After identifying the target company, call `nta-corporate-number-lookup` skill w
 
 - Output is signal / 確認材料 / context — NOT a decision.
 - Active corporations only by default (closed entities excluded via `close=0` flag).
-- For dissolved / merged corporation detection, use `nta-corporate-number-lookup` with the 法人番号 directly.
+- For dissolved / merged corporation detection, use `get_nta_corporate_record` with the 法人番号 directly.

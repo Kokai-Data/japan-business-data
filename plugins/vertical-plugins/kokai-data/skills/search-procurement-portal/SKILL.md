@@ -80,7 +80,7 @@ For Phase 2 data, AI agent must direct the user to consult a commercial procurem
 | 法令本文 | ❌ | ❌ | — | ❌ | ✅ | — |
 | **政府調達公告 (発注側)** | ❌ | ❌ | — | ❌ | — | **✅ 公式** |
 
-Pair with `gbizinfo-company-search` (cross-ref 発注機関 → 関連企業) or with `nta-corporate-name-search` (法人特定 of issuing organization's affiliated 法人).
+Pair with `search_company` (cross-ref 発注機関 → 関連企業) or with `search_nta_corporate_name` (法人特定 of issuing organization's affiliated 法人).
 
 ## Use cases
 

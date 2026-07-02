@@ -37,5 +37,5 @@ The prompt returns thinking instructions + embedded resources for landscape brie
 ## Boundary
 
 - Output is **landscape signal**, NOT individual application advice.
-- For company-specific fit analysis, use `kokai-subsidy-fit-prompt` skill.
+- For company-specific fit analysis, use the kokai MCP server's `kokai_subsidy_fit_jp` prompt.
 - Final 適格性 / 申請可否 verification requires a certified Japanese 士業.

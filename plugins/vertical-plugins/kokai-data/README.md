@@ -8,6 +8,30 @@ Vertical plugin: shared skills and MCP connector for Japanese public business in
 claude plugin install kokai-data@kokai
 ```
 
+## MCP client identity (works out of the box)
+
+The kokai MCP server requires a client identity header on every request and
+returns HTTP 401 `missing_mcp_client_identity` without one. This plugin ships
+a default identity, so it works out of the box with no setup:
+
+- Default: a shared anonymous identity (`kokai-plugin-shared-default`) is sent
+  via the `x-kokai-beta-client-id` header.
+- Recommended: set the `KOKAI_MCP_CLIENT_ID` environment variable to any unique
+  string (e.g. a UUID) to get your own stable anonymous workspace instead of
+  the shared one:
+
+```bash
+# macOS / Linux
+export KOKAI_MCP_CLIENT_ID="$(uuidgen)"
+
+# Windows (PowerShell)
+setx KOKAI_MCP_CLIENT_ID ([guid]::NewGuid().ToString())
+```
+
+No account or API key is required for the free read-only tools. Paid tools
+(customs advisory) additionally require Kokai account OAuth — see
+https://kokai.ai/pricing.
+
 ## What it provides
 
 - **19 skills** covering:

@@ -70,6 +70,22 @@ AGENT_SKILL_BUNDLES = {
         "authority-strip-formatter",
         "shigyo-boundary-disclaimer",
     ],
+    # Audit 2026-07-02: these two plugins carried manually-copied skills that
+    # drifted from the vertical source — bring them under sync.
+    "legal-research-jp": [
+        "search-egov-laws",
+        "get-egov-laws-data",
+        "authority-strip-formatter",
+        "shigyo-boundary-disclaimer",
+    ],
+    "procurement-discovery-jp": [
+        "search-procurement-portal",
+        "gbizinfo-company-search",
+        "nta-corporate-name-search",
+        "evidence-citation-builder",
+        "authority-strip-formatter",
+        "shigyo-boundary-disclaimer",
+    ],
 }
 
 

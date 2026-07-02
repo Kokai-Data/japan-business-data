@@ -80,7 +80,7 @@ For each document:
 | **大量保有 disclosure** | ❌ | ❌ | — | **✅ official** |
 | **TOB / M&A signal** | ❌ | ❌ | — | **✅ official** |
 
-Pair with `edinet-company-ir-tracker` for company-level cluster view, or with `get_edinet_document` to download the binary file.
+Pair with `get_edinet_company_disclosures` for company-level cluster view, or with `get_edinet_document` to download the binary file.
 
 ## Boundary
 

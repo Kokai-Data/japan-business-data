@@ -2,6 +2,22 @@
 
 All notable changes to this repository follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conventions.
 
+## [0.9.0] — 2026-07-02 — Out-of-the-box MCP connection fix (401) + skills audit fixes
+
+### Fixed
+
+- **🔴 Critical: MCP connection no longer fails with HTTP 401 out of the box** (`missing_mcp_client_identity`). The kokai MCP server requires a client identity header on every request (including `initialize`), but the shipped `.mcp.json` sent a bare URL — so **all skills were broken for new users** (existing users with an identity never noticed). `.mcp.json` now sends `x-kokai-beta-client-id: ${KOKAI_MCP_CLIENT_ID:-kokai-plugin-shared-default}` — works immediately with a shared anonymous identity; set the `KOKAI_MCP_CLIENT_ID` env var to any unique string for a personal anonymous workspace. Verified live: `initialize` and `tools/list` both return 200 with the default. (kokai-data 0.2.0 → 0.3.0)
+- **🔴 Critical: agent plugins now bundle the kokai MCP server** — all 7 agent plugins (`proposal-prep-jp` / `subsidy-fit-jp` / `due-diligence-jp` / `competitor-brief-jp` / `subsidy-landscape-jp` / `legal-research-jp` / `procurement-discovery-jp`) previously declared no MCP server at all and only worked if `kokai-data` happened to be installed alongside (contradicting their "Self-contained" READMEs). Each now ships the same `.mcp.json` (identity headers included) and works standalone. README Dependencies sections updated accordingly. (all agent plugins 0.1.0 → 0.2.0)
+- **`nta-corporate-number-lookup` output docs**: `terms_of_use` description said "cite gBizINFO terms" (copy-paste leftover) — corrected to the actual server response (出典: 国税庁法人番号公表サイト attribution + 国税庁 SoT disclaimer). Fixed in the vertical source and re-synced to `due-diligence-jp` / `competitor-brief-jp`.
+- **Internal memory-file reference removed from `evidence-citation-builder`** Boundary section (a private dev memory filename had leaked into the distributed SKILL.md in 3 plugins) — replaced with the plain design statement.
+- **士業 boundary disclaimer now includes 弁護士 / 司法書士** (Japanese + English verbatim blocks). The disclaimer scopes out legal judgment but omitted lawyers from the advisor list — inconsistent for `legal-research-jp`, whose agent names 弁護士 / 司法書士 explicitly. Fixed in the shared template and synced to all plugins.
+- Internal Sprint numbers removed from `legal-research-jp` README.
+
+### Changed
+
+- **Cross-skill references unified to kokai MCP tool / prompt names** (single-install safe): SKILL.md guidance no longer points at skill or agent names that may not be bundled in the installed plugin (e.g. `jgrants-subsidy-search` skill, `subsidy-fit-jp` agent). References now use MCP tool names (`search_subsidies` / `get_subsidy_detail` / `get_nta_corporate_record` / `search_edinet_documents` / `get_edinet_document` / `get_edinet_company_disclosures` / `search_egov_laws` / `get_egov_laws_data` / `search_company` / `search_nta_corporate_name` / `get_entity_profile`) and MCP prompt names (`kokai_subsidy_fit_jp`), which always resolve because every plugin now bundles the MCP server.
+- `scripts/sync-agent-skills.py`: added `legal-research-jp` and `procurement-discovery-jp` bundles — their skill copies were previously maintained by hand outside the sync flow and could drift from the vertical source.
+
 ## [0.8.0] — 2026-06-04 — Marketplace renamed to `kokai` (brand-first) + displayName cleanup
 
 ### Changed

@@ -27,7 +27,7 @@ Output includes:
 
 ## Dependencies
 
-- Vertical plugin: `kokai-data`
+- MCP server: `kokai` (`https://mcp.kokai.ai/functions/v1/mcp-server`) — bundled via this plugin's `.mcp.json`, works standalone (no other plugin required). Optional: set the `KOKAI_MCP_CLIENT_ID` env var to any unique string for a personal anonymous identity instead of the shared default (see the `kokai-data` plugin README).
 
 Skills used:
 

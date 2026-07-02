@@ -27,7 +27,7 @@ Call the kokai MCP server's `get_entity_profile` tool with the 13-digit corporat
 ## Constraints (important)
 
 - gBizINFO `categories.subsidy` and `categories.procurement` fields are mostly null for Japanese companies — use this for entity identification (法人番号 / name / location), NOT for subsidy history.
-- For subsidy data, use `jgrants-subsidy-search` + `jgrants-subsidy-detail` skills instead.
+- For subsidy data, use the `search_subsidies` + `get_subsidy_detail` MCP tools instead.
 - The result includes the ACBS 4-layer authority strip; the gBizINFO data is `公式` (official) layer and `cite_required`.
 
 ## Output format

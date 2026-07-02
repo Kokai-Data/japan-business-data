@@ -1,13 +1,13 @@
 ---
 name: jgrants-subsidy-detail
-description: Get detailed J-Grants subsidy information (full eligibility criteria, deadlines, max amount, application form URLs) by subsidy_id from `jgrants-subsidy-search`. 日本語 keyword: 補助金詳細 / 補助金情報 取得 / J-Grants 詳細 / subsidy_id で詳細取得.
+description: Get detailed J-Grants subsidy information (full eligibility criteria, deadlines, max amount, application form URLs) by subsidy_id from `search_subsidies`. 日本語 keyword: 補助金詳細 / 補助金情報 取得 / J-Grants 詳細 / subsidy_id で詳細取得.
 ---
 
 ## When to use
 
 Use this skill when:
 
-- You have a J-Grants subsidy ID from `jgrants-subsidy-search`.
+- You have a J-Grants subsidy ID from a prior `search_subsidies` call.
 - You need full details: eligibility criteria, application forms, contact info, deadlines, max amount.
 
 ## How to invoke

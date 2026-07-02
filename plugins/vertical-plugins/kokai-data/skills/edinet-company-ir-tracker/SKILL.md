@@ -71,21 +71,21 @@ EDINET の raw `/documents.json` は 1 日単位の flat list を返すだけ。
 4. **訂正報告書 / 不開示 / 取下げ event signal** (governance / 信頼性 signal)
 5. **4 公的 SoT cross-reference 可能** (国税庁 法人番号 → gBizINFO 企業 profile → J-Grants 補助金 → EDINET IR)
 
-## Differentiation from other Kokai sources + skills
+## Differentiation from other Kokai sources + tools
 
-| Use case | 適切な skill |
+| Use case | 適切な kokai MCP tool |
 |---|---|
-| 法人特定 + 業界 / 地域 / 規模 | `gbizinfo-company-search` |
-| 法人 master + 異動履歴 (全法人) | `nta-corporate-number-lookup` |
-| 補助金交付実績 + 適格性 | `jgrants-subsidy-search` + `subsidy-fit-jp` agent |
-| **上場企業 IR 全書類 timeline + signal cluster** | **`edinet-company-ir-tracker` (this)** |
-| EDINET 単日書類一覧 (date 別 query) | `edinet-document-search` (本 skill より low-level) |
-| EDINET 書類本体 binary | `edinet-document-fetch` (this の後続 step) |
+| 法人特定 + 業界 / 地域 / 規模 | `search_company` |
+| 法人 master + 異動履歴 (全法人) | `get_nta_corporate_record` |
+| 補助金交付実績 + 適格性 | `search_subsidies` + `kokai_subsidy_fit_jp` prompt |
+| **上場企業 IR 全書類 timeline + signal cluster** | **`get_edinet_company_disclosures` (this skill)** |
+| EDINET 単日書類一覧 (date 別 query) | `search_edinet_documents` (本 skill より low-level) |
+| EDINET 書類本体 binary | `get_edinet_document` (this の後続 step) |
 
 ## Boundary
 
 - Output is signal / 確認材料 / context — **NOT investment advice**.
 - 投資判断 / 法的判断 / 税務判断 requires a certified financial advisor / 公認会計士 / 弁護士 / 税理士.
 - 4-layer authority strip: EDINET data is L1 `source_authority: "official"` (公式 cite_required)、Kokai 側 signal cluster は L2 `kokai_normalized`、AI agent 要約は L3 `ai_summary`、推論は L4 `ai_estimate`。
-- `resolveStatus: "unresolved"` は「上場企業でない可能性が高い」signal だが、確定情報ではない (lookback 短い + EDINET 提出タイミングの偶然で false negative ありえる)。確定には 90 日 lookback or `edinet-document-search` で直接確認。
+- `resolveStatus: "unresolved"` は「上場企業でない可能性が高い」signal だが、確定情報ではない (lookback 短い + EDINET 提出タイミングの偶然で false negative ありえる)。確定には 90 日 lookback or `search_edinet_documents` tool で直接確認。
 - Public records only — EDINET data is open disclosure, not insider information.

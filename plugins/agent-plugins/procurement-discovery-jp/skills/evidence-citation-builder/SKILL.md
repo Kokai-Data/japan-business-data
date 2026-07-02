@@ -47,4 +47,4 @@ Include in a numbered citation list at the end of your brief.
 ## Boundary
 
 - Output is signal / 確認材料 / context — NOT a decision.
-- Research-artifact-derived AI evidence is excluded from this call by design (memory `feedback_mcp_self_verification_caught_get_subsidy_detail_field_mismatch.md` evidence_refs gap).
+- Research-artifact-derived AI evidence is excluded from this call by design.

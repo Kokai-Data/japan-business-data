@@ -25,12 +25,12 @@ Produces cited legal research outputs using ONLY public canonical sources:
 
 ## Dependencies
 
-- Vertical plugin: `kokai-data`
+- MCP server: `kokai` (`https://mcp.kokai.ai/functions/v1/mcp-server`) — bundled via this plugin's `.mcp.json`, works standalone (no other plugin required). Optional: set the `KOKAI_MCP_CLIENT_ID` env var to any unique string for a personal anonymous identity instead of the shared default (see the `kokai-data` plugin README).
 
 Skills used:
 
-- `search-egov-laws` (新規 Sprint 14+12 で追加)
-- `get-egov-laws-data` (新規 Sprint 14+12 で追加)
+- `search-egov-laws`
+- `get-egov-laws-data`
 - `authority-strip-formatter`
 - `shigyo-boundary-disclaimer`
 

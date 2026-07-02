@@ -1,13 +1,13 @@
 ---
 name: edinet-document-fetch
-description: Download a single EDINET disclosure document binary (PDF / XBRL ZIP / CSV) by docID. Returns a time-limited signed URL from Kokai's private storage proxy. Use after `edinet-document-search` to retrieve the actual filing for citation or analysis. 日本語 keyword: EDINET 文書取得 / 開示書類 ダウンロード / 有価証券報告書 binary 取得 / 開示文書 PDF 取得.
+description: Download a single EDINET disclosure document binary (PDF / XBRL ZIP / CSV) by docID. Returns a time-limited signed URL from Kokai's private storage proxy. Use after `search_edinet_documents` to retrieve the actual filing for citation or analysis. 日本語 keyword: EDINET 文書取得 / 開示書類 ダウンロード / 有価証券報告書 binary 取得 / 開示文書 PDF 取得.
 ---
 
 ## When to use
 
 Use this skill when:
 
-- You have a `docID` from `edinet-document-search` and need the actual document binary.
+- You have a `docID` from a prior `search_edinet_documents` call and need the actual document binary.
 - The user wants to view a specific 有価証券報告書 PDF, 四半期報告書 XBRL, or 大量保有報告書 file.
 - You're building a citation with a direct link to the source document.
 - XBRL parsing or financial-statement extraction (manual / external tool) is the next step.

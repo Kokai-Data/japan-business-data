@@ -1,6 +1,6 @@
 {
   "name": "legal-research-jp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Japanese legal research from e-Gov 法令検索 (デジタル庁) — cited statute lookup + regulatory landscape mapping with 弁護士 / 行政書士 / 司法書士 boundary.",
   "author": {
     "name": "Kokai Data"
