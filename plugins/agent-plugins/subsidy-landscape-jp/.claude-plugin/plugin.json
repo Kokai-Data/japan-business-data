@@ -1,8 +1,0 @@
-{
-  "name": "subsidy-landscape-jp",
-  "version": "0.2.0",
-  "description": "Top-N Japanese subsidies for an industry or use-purpose theme (landscape scan), with J-Grants citation per subsidy.",
-  "author": {
-    "name": "Kokai Data"
-  }
-}

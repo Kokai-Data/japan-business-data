@@ -2,6 +2,14 @@
 
 All notable changes to this repository follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conventions.
 
+## [0.10.0] — 2026-07-04 — One plugin: agent plugins consolidated into kokai-data
+
+### Changed
+
+- **🔴 Marketplace now lists exactly ONE plugin: `kokai-data`** (kokai-data 0.4.0). The 7 agent plugins (`proposal-prep-jp` / `subsidy-fit-jp` / `due-diligence-jp` / `competitor-brief-jp` / `subsidy-landscape-jp` / `legal-research-jp` / `procurement-discovery-jp`) are consolidated into `kokai-data`: their 7 `agents/*.md` moved to `kokai-data/agents/`, and the agent-plugin directories are removed. Rationale: 8 marketplace entries confused first-time users ("which do I install?"); the connection story is now one line — install `kokai-data`, get everything (MCP + 16 slash commands + 19 skills + 7 agents). Functionality is unchanged; the agent subagent-type prefix changes from `<agent>-jp:` to `kokai-data:`. Migration guide added to README.
+- `scripts/sync-agent-skills.py` removed (its sync targets no longer exist; skills now live only in `kokai-data/skills/`).
+- Version note: 0.9.0's notes declared "kokai-data 0.2.0 → 0.3.0" but `plugin.json` was left at 0.2.0 by mistake; this release corrects the manifest directly to 0.4.0.
+
 ## [0.9.0] — 2026-07-02 — Out-of-the-box MCP connection fix (401) + skills audit fixes
 
 ### Fixed

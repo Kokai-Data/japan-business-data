@@ -1,8 +1,0 @@
-{
-  "name": "due-diligence-jp",
-  "version": "0.2.0",
-  "description": "1-page due diligence brief on a Japanese company from public canonical sources (gBizINFO + evidence refs).",
-  "author": {
-    "name": "Kokai Data"
-  }
-}

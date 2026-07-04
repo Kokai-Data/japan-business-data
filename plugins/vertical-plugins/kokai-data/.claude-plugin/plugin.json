@@ -1,7 +1,7 @@
 {
   "name": "kokai-data",
-  "version": "0.3.0",
-  "description": "Kokai Data — 日本の公開ビジネスデータ (gBizINFO 法人 / J-Grants 補助金 / 国税庁 / EDINET / e-Gov 法令 / 官公需) + 通関(Trade) を、出典つきで AI エージェントから引用。slash commands + skills + MCP server。",
+  "version": "0.4.0",
+  "description": "Kokai Data — 日本の公開ビジネスデータ (gBizINFO 法人 / J-Grants 補助金 / 国税庁 / EDINET / e-Gov 法令 / 官公需) + 通関(Trade) を、出典つきで AI エージェントから引用。これ 1 本で全部入り: slash commands + skills + 専門 agent 7 体 + MCP server 自動接続。",
   "author": {
     "name": "Kokai Data"
   }
